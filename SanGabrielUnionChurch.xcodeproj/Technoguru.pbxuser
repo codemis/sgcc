@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* SanGabrielUnionChurchAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1087, 722}}";
+			sepNavSelRange = "{219, 99}";
+			sepNavVisRange = "{0, 1128}";
+		};
+	};
+	1D3623250D0F684500981E51 /* SanGabrielUnionChurchAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2371, 2717}}";
+			sepNavSelRange = "{5828, 1728}";
+			sepNavVisRange = "{5550, 2718}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* SanGabrielUnionChurch */ = {
+		activeExec = 0;
+		executables = (
+			66D0D5F4133831D4009111B6 /* SanGabrielUnionChurch */,
+		);
+	};
+	28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1112, 720}}";
+			sepNavSelRange = "{123, 0}";
+			sepNavVisRange = "{0, 948}";
+		};
+	};
+	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1112, 4823}}";
+			sepNavSelRange = "{1272, 9}";
+			sepNavVisRange = "{902, 1919}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 66D0D5F4133831D4009111B6 /* SanGabrielUnionChurch */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* SanGabrielUnionChurch */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* SanGabrielUnionChurch */,
+		);
+		codeSenseManager = 66D0D60E133831DD009111B6 /* Code sense */;
+		executables = (
+			66D0D5F4133831D4009111B6 /* SanGabrielUnionChurch */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					934,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1067,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 323753067;
+			PBXWorkspaceStateSaveDate = 323753067;
+		};
+		perUserProjectItems = {
+			661BDDBD13462CC100CF7838 = 661BDDBD13462CC100CF7838 /* PBXTextBookmark */;
+			661BDDBE13462CC100CF7838 = 661BDDBE13462CC100CF7838 /* PBXTextBookmark */;
+			661BDDBF13462CC100CF7838 = 661BDDBF13462CC100CF7838 /* PBXTextBookmark */;
+			661BDDC113462CC100CF7838 = 661BDDC113462CC100CF7838 /* PBXTextBookmark */;
+			6620DA89133E277E004FE72B = 6620DA89133E277E004FE72B /* PlistBookmark */;
+			66344758134C145C00E960DB = 66344758134C145C00E960DB /* PBXTextBookmark */;
+			6646618B134AB994002524F7 = 6646618B134AB994002524F7 /* PBXTextBookmark */;
+			6646618C134AB994002524F7 = 6646618C134AB994002524F7 /* PBXTextBookmark */;
+			6646618D134AB994002524F7 = 6646618D134AB994002524F7 /* PBXTextBookmark */;
+			664661B6134AC527002524F7 = 664661B6134AC527002524F7 /* PBXTextBookmark */;
+			664661F0134AC9DD002524F7 = 664661F0134AC9DD002524F7 /* PBXTextBookmark */;
+			664B235F133EDAC9005676EA = 664B235F133EDAC9005676EA /* PBXBookmark */;
+			664B2360133EDAC9005676EA = 664B2360133EDAC9005676EA /* PBXBookmark */;
+			664B2361133EDAC9005676EA = 664B2361133EDAC9005676EA /* PBXBookmark */;
+			664B24EE13441B0B005676EA = 664B24EE13441B0B005676EA /* PBXTextBookmark */;
+			664B24F213441B0B005676EA = 664B24F213441B0B005676EA /* PBXTextBookmark */;
+			664B251913441D19005676EA = 664B251913441D19005676EA /* PBXTextBookmark */;
+			664B251A13441D19005676EA = 664B251A13441D19005676EA /* PBXTextBookmark */;
+			664B251B13441D19005676EA = 664B251B13441D19005676EA /* PBXTextBookmark */;
+			664B252213441D19005676EA = 664B252213441D19005676EA /* PBXTextBookmark */;
+			664B253D13441F11005676EA = 664B253D13441F11005676EA /* PBXTextBookmark */;
+			664B253E13441F11005676EA = 664B253E13441F11005676EA /* PBXTextBookmark */;
+			664B25491344206F005676EA = 664B25491344206F005676EA /* PBXTextBookmark */;
+			664B254A1344206F005676EA = 664B254A1344206F005676EA /* PBXTextBookmark */;
+			664B254B1344206F005676EA = 664B254B1344206F005676EA /* PBXTextBookmark */;
+			664B254D1344206F005676EA = 664B254D1344206F005676EA /* PBXTextBookmark */;
+			664B254E1344206F005676EA = 664B254E1344206F005676EA /* PBXTextBookmark */;
+			664B258D13442BCB005676EA = 664B258D13442BCB005676EA /* PBXTextBookmark */;
+			664B258E13442BCB005676EA = 664B258E13442BCB005676EA /* PBXTextBookmark */;
+			664B25A6134430D4005676EA = 664B25A6134430D4005676EA /* PBXTextBookmark */;
+			664B25A7134430D4005676EA = 664B25A7134430D4005676EA /* PBXTextBookmark */;
+			664B25B1134431CB005676EA = 664B25B1134431CB005676EA /* PBXTextBookmark */;
+			664B25CC1344C821005676EA = 664B25CC1344C821005676EA /* PBXTextBookmark */;
+			667B01221339B58400790320 = 667B01221339B58400790320 /* PBXTextBookmark */;
+			66D0D6E81338E416009111B6 = 66D0D6E81338E416009111B6 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 66D0D60D133831DD009111B6 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	661BDDBD13462CC100CF7838 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8982133B014700F75A5A /* SermonDetailsViewController.h */;
+		name = "SermonDetailsViewController.h: 6";
+		rLen = 0;
+		rLoc = 132;
+		rType = 0;
+		vrLen = 573;
+		vrLoc = 0;
+	};
+	661BDDBE13462CC100CF7838 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B22E8133E3F0E005676EA /* AboutUsViewController.h */;
+		name = "AboutUsViewController.h: 19";
+		rLen = 0;
+		rLoc = 499;
+		rType = 0;
+		vrLen = 511;
+		vrLoc = 0;
+	};
+	661BDDBF13462CC100CF7838 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B22E9133E3F0E005676EA /* AboutUsViewController.m */;
+		name = "AboutUsViewController.m: 58";
+		rLen = 94;
+		rLoc = 2136;
+		rType = 0;
+		vrLen = 2546;
+		vrLoc = 536;
+	};
+	661BDDC113462CC100CF7838 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 66D0D6CB13385CC6009111B6 /* ArticleDetailsViewController.m */;
+		name = "ArticleDetailsViewController.m: 43";
+		rLen = 194;
+		rLoc = 1064;
+		rType = 0;
+		vrLen = 1336;
+		vrLoc = 422;
+	};
+	6620DA89133E277E004FE72B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* SanGabrielUnionChurch-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleExecutable,
+		);
+		name = "/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/SanGabrielUnionChurch-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	66344758134C145C00E960DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 139";
+		rLen = 189;
+		rLoc = 4309;
+		rType = 0;
+		vrLen = 2268;
+		vrLoc = 3280;
+	};
+	6646618B134AB994002524F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 6";
+		rLen = 0;
+		rLoc = 123;
+		rType = 0;
+		vrLen = 948;
+		vrLoc = 0;
+	};
+	6646618C134AB994002524F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 49";
+		rLen = 9;
+		rLoc = 1272;
+		rType = 0;
+		vrLen = 1919;
+		vrLoc = 902;
+	};
+	6646618D134AB994002524F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8983133B014700F75A5A /* SermonDetailsViewController.m */;
+		name = "SermonDetailsViewController.m: 34";
+		rLen = 0;
+		rLoc = 771;
+		rType = 0;
+		vrLen = 1380;
+		vrLoc = 3551;
+	};
+	664661B6134AC527002524F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
+		name = "SermonsViewController.h: 35";
+		rLen = 12;
+		rLoc = 1225;
+		rType = 0;
+		vrLen = 1245;
+		vrLoc = 0;
+	};
+	664661F0134AC9DD002524F7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 158";
+		rLen = 0;
+		rLoc = 4913;
+		rType = 0;
+		vrLen = 2380;
+		vrLoc = 4601;
+	};
+	664B22E8133E3F0E005676EA /* AboutUsViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1112, 722}}";
+			sepNavSelRange = "{499, 0}";
+			sepNavVisRange = "{0, 511}";
+		};
+	};
+	664B22E9133E3F0E005676EA /* AboutUsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1112, 1157}}";
+			sepNavSelRange = "{2136, 94}";
+			sepNavVisRange = "{536, 2546}";
+		};
+	};
+	664B235F133EDAC9005676EA /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 6620DA7B133D9C59004FE72B /* landing.png */;
+	};
+	664B2360133EDAC9005676EA /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 6620DA51133D9501004FE72B /* Icon.png */;
+	};
+	664B2361133EDAC9005676EA /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 6620DA52133D9501004FE72B /* Icon@2x.png */;
+	};
+	664B24A8134180F5005676EA /* TwoWaysViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1074, 722}}";
+			sepNavSelRange = "{500, 64}";
+			sepNavVisRange = "{0, 642}";
+		};
+	};
+	664B24A9134180F5005676EA /* TwoWaysViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1074, 1209}}";
+			sepNavSelRange = "{1308, 278}";
+			sepNavVisRange = "{675, 1815}";
+		};
+	};
+	664B24DE13441964005676EA /* ModalViewControllerDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1087, 722}}";
+			sepNavSelRange = "{247, 0}";
+			sepNavVisRange = "{0, 285}";
+		};
+	};
+	664B24ED13441B0B005676EA /* DatepickerDelegate.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DatepickerDelegate.h;
+		path = /Users/Technoguru/Sites/iphone/BoardGamer/BoardGamer1/DatepickerDelegate.h;
+		sourceTree = "<absolute>";
+	};
+	664B24EE13441B0B005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B24EF13441B0B005676EA /* DatePickerController.h */;
+		name = "DatePickerController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 217;
+		vrLoc = 0;
+	};
+	664B24EF13441B0B005676EA /* DatePickerController.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DatePickerController.h;
+		path = /Users/Technoguru/Sites/iphone/BoardGamer/BoardGamer1/DatePickerController.h;
+		sourceTree = "<absolute>";
+	};
+	664B24F113441B0B005676EA /* DatepickerViewController.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = DatepickerViewController.m;
+		path = /Users/Technoguru/Sites/iphone/BoardGamer/BoardGamer1/DatepickerViewController.m;
+		sourceTree = "<absolute>";
+	};
+	664B24F213441B0B005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B24F313441B0B005676EA /* DatepickerViewController.h */;
+		name = "DatepickerViewController.h: 5";
+		rLen = 63;
+		rLoc = 198;
+		rType = 0;
+		vrLen = 291;
+		vrLoc = 0;
+	};
+	664B24F313441B0B005676EA /* DatepickerViewController.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DatepickerViewController.h;
+		path = /Users/Technoguru/Sites/iphone/BoardGamer/BoardGamer1/DatepickerViewController.h;
+		sourceTree = "<absolute>";
+	};
+	664B24F613441B0B005676EA /* AddEventViewController.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = AddEventViewController.m;
+		path = /Users/Technoguru/Sites/iphone/BoardGamer/BoardGamer1/Classes/AddEventViewController.m;
+		sourceTree = "<absolute>";
+	};
+	664B24F813441B0B005676EA /* AddEventViewController.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = AddEventViewController.h;
+		path = /Users/Technoguru/Sites/iphone/BoardGamer/BoardGamer1/Classes/AddEventViewController.h;
+		sourceTree = "<absolute>";
+	};
+	664B251913441D19005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B24ED13441B0B005676EA /* DatepickerDelegate.h */;
+		name = "DatepickerDelegate.h: 5";
+		rLen = 0;
+		rLoc = 122;
+		rType = 0;
+		vrLen = 122;
+		vrLoc = 0;
+	};
+	664B251A13441D19005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B24DE13441964005676EA /* ModalViewControllerDelegate.h */;
+		name = "ModalViewControllerDelegate.h: 12";
+		rLen = 0;
+		rLoc = 247;
+		rType = 0;
+		vrLen = 285;
+		vrLoc = 0;
+	};
+	664B251B13441D19005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B251C13441D19005676EA /* BoardGamerAppDelegate.m */;
+		name = "BoardGamerAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1975;
+		vrLoc = 2455;
+	};
+	664B251C13441D19005676EA /* BoardGamerAppDelegate.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = BoardGamerAppDelegate.m;
+		path = /Users/Technoguru/Sites/iphone/BoardGamer/BoardGamer1/Classes/BoardGamerAppDelegate.m;
+		sourceTree = "<absolute>";
+	};
+	664B252213441D19005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B24F113441B0B005676EA /* DatepickerViewController.m */;
+		name = "DatepickerViewController.m: 33";
+		rLen = 0;
+		rLoc = 742;
+		rType = 0;
+		vrLen = 866;
+		vrLoc = 0;
+	};
+	664B253D13441F11005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B24F813441B0B005676EA /* AddEventViewController.h */;
+		name = "AddEventViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 960;
+		vrLoc = 0;
+	};
+	664B253E13441F11005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B24F613441B0B005676EA /* AddEventViewController.m */;
+		name = "AddEventViewController.m: 54";
+		rLen = 46;
+		rLoc = 1796;
+		rType = 0;
+		vrLen = 1854;
+		vrLoc = 1123;
+	};
+	664B25491344206F005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* SanGabrielUnionChurchAppDelegate.h */;
+		name = "SanGabrielUnionChurchAppDelegate.h: 12";
+		rLen = 99;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 1128;
+		vrLoc = 0;
+	};
+	664B254A1344206F005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* SanGabrielUnionChurchAppDelegate.m */;
+		name = "SanGabrielUnionChurchAppDelegate.m: 164";
+		rLen = 1728;
+		rLoc = 5828;
+		rType = 0;
+		vrLen = 2718;
+		vrLoc = 5550;
+	};
+	664B254B1344206F005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 66D0D6CA13385CC6009111B6 /* ArticleDetailsViewController.h */;
+		name = "ArticleDetailsViewController.h: 6";
+		rLen = 0;
+		rLoc = 133;
+		rType = 0;
+		vrLen = 489;
+		vrLoc = 0;
+	};
+	664B254D1344206F005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667B00D11339AE6D00790320 /* EventsWebViewController.h */;
+		name = "EventsWebViewController.h: 6";
+		rLen = 0;
+		rLoc = 128;
+		rType = 0;
+		vrLen = 506;
+		vrLoc = 0;
+	};
+	664B254E1344206F005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667B00D21339AE6D00790320 /* EventsWebViewController.m */;
+		name = "EventsWebViewController.m: 6";
+		rLen = 0;
+		rLoc = 128;
+		rType = 0;
+		vrLen = 1588;
+		vrLoc = 0;
+	};
+	664B2558134423F4005676EA /* WhoWeAreViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1074, 722}}";
+			sepNavSelRange = "{378, 127}";
+			sepNavVisRange = "{0, 511}";
+		};
+	};
+	664B2559134423F4005676EA /* WhoWeAreViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1323, 507}}";
+			sepNavSelRange = "{1424, 0}";
+			sepNavVisRange = "{0, 1429}";
+		};
+	};
+	664B258D13442BCB005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B24A8134180F5005676EA /* TwoWaysViewController.h */;
+		name = "TwoWaysViewController.h: 18";
+		rLen = 64;
+		rLoc = 500;
+		rType = 0;
+		vrLen = 642;
+		vrLoc = 0;
+	};
+	664B258E13442BCB005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B24A9134180F5005676EA /* TwoWaysViewController.m */;
+		name = "TwoWaysViewController.m: 54";
+		rLen = 278;
+		rLoc = 1308;
+		rType = 0;
+		vrLen = 1815;
+		vrLoc = 675;
+	};
+	664B259C13442EF2005676EA /* BeliefsViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1074, 722}}";
+			sepNavSelRange = "{440, 9}";
+			sepNavVisRange = "{0, 519}";
+		};
+	};
+	664B259D13442EF2005676EA /* BeliefsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {47647, 806}}";
+			sepNavSelRange = "{7610, 0}";
+			sepNavVisRange = "{3, 8294}";
+		};
+	};
+	664B25A6134430D4005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B2558134423F4005676EA /* WhoWeAreViewController.h */;
+		name = "WhoWeAreViewController.h: 15";
+		rLen = 127;
+		rLoc = 378;
+		rType = 0;
+		vrLen = 511;
+		vrLoc = 0;
+	};
+	664B25A7134430D4005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B2559134423F4005676EA /* WhoWeAreViewController.m */;
+		name = "WhoWeAreViewController.m: 34";
+		rLen = 276;
+		rLoc = 804;
+		rType = 0;
+		vrLen = 1421;
+		vrLoc = 0;
+	};
+	664B25B1134431CB005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B259C13442EF2005676EA /* BeliefsViewController.h */;
+		name = "BeliefsViewController.h: 15";
+		rLen = 9;
+		rLoc = 440;
+		rType = 0;
+		vrLen = 519;
+		vrLoc = 0;
+	};
+	664B25CC1344C821005676EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 664B259D13442EF2005676EA /* BeliefsViewController.m */;
+		name = "BeliefsViewController.m: 31";
+		rLen = 0;
+		rLoc = 7610;
+		rType = 0;
+		vrLen = 8294;
+		vrLoc = 3;
+	};
+	667A8881133ACAF200F75A5A /* SermonsViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1112, 720}}";
+			sepNavSelRange = "{1225, 12}";
+			sepNavVisRange = "{0, 1245}";
+		};
+	};
+	667A8882133ACAF200F75A5A /* SermonsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1342, 3315}}";
+			sepNavSelRange = "{4309, 189}";
+			sepNavVisRange = "{3280, 2268}";
+			sepNavWindowFrame = "{{67, 0}, {1373, 873}}";
+		};
+	};
+	667A8982133B014700F75A5A /* SermonDetailsViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1112, 745}}";
+			sepNavSelRange = "{132, 0}";
+			sepNavVisRange = "{0, 573}";
+		};
+	};
+	667A8983133B014700F75A5A /* SermonDetailsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1412, 2574}}";
+			sepNavSelRange = "{771, 0}";
+			sepNavVisRange = "{3551, 1380}";
+			sepNavWindowFrame = "{{15, 0}, {1373, 873}}";
+		};
+	};
+	667B00D11339AE6D00790320 /* EventsWebViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1087, 722}}";
+			sepNavSelRange = "{128, 0}";
+			sepNavVisRange = "{0, 506}";
+		};
+	};
+	667B00D21339AE6D00790320 /* EventsWebViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1087, 936}}";
+			sepNavSelRange = "{128, 0}";
+			sepNavVisRange = "{0, 1588}";
+		};
+	};
+	667B01221339B58400790320 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667B01231339B58400790320 /* UINavigationController.h */;
+		name = "UINavigationController.h: 109";
+		rLen = 159;
+		rLoc = 5721;
+		rType = 0;
+		vrLen = 4187;
+		vrLoc = 2385;
+	};
+	667B01231339B58400790320 /* UINavigationController.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = UINavigationController.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINavigationController.h;
+		sourceTree = "<absolute>";
+	};
+	66D0D5F4133831D4009111B6 /* SanGabrielUnionChurch */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = SanGabrielUnionChurch;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	66D0D60D133831DD009111B6 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	66D0D60E133831DD009111B6 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	66D0D6A2133859CF009111B6 /* UITableViewCell.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = UITableViewCell.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h;
+		sourceTree = "<absolute>";
+	};
+	66D0D6CA13385CC6009111B6 /* ArticleDetailsViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1087, 722}}";
+			sepNavSelRange = "{133, 0}";
+			sepNavVisRange = "{0, 489}";
+		};
+	};
+	66D0D6CB13385CC6009111B6 /* ArticleDetailsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1112, 2444}}";
+			sepNavSelRange = "{1064, 194}";
+			sepNavVisRange = "{422, 1336}";
+		};
+	};
+	66D0D6E81338E416009111B6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 66D0D6A2133859CF009111B6 /* UITableViewCell.h */;
+		name = "UITableViewCell.h: 57";
+		rLen = 76;
+		rLoc = 2287;
+		rType = 0;
+		vrLen = 2374;
+		vrLoc = 0;
+	};
+}
