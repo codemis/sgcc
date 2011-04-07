@@ -11,16 +11,19 @@
 #import "MWFeedParser.h"
 #import "ArticleDetailsViewController.h"
 #import "SermonsViewController.h"
+#import "Feed.h"
 
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+-(void) parseArticles;
+- (void)insertNewObject:(NSMutableDictionary *) itemToSave;
 @end
 
 
 @implementation RootViewController
 
-@synthesize fetchedResultsController=fetchedResultsController_, managedObjectContext=managedObjectContext_, activityIndicator, itemsToDisplay;
+@synthesize fetchedResultsController=fetchedResultsController_, managedObjectContext=managedObjectContext_, activityIndicator, itemsToDisplay, articleLastUpdated;
 
 - (void)dealloc {
 	[activityIndicator release];
@@ -30,7 +33,18 @@
 	[feedParser release];
     [fetchedResultsController_ release];
     [managedObjectContext_ release];
+	[articleLastUpdated release];
     [super dealloc];
+}
+
+#pragma mark -
+#pragma mark Lazy Loaders
+- (NSDate *) articleLastUpdated{
+	if (articleLastUpdated == nil)
+    {
+        self.articleLastUpdated = [[NSUserDefaults standardUserDefaults] objectForKey:@"ArticleLastUpdated"];
+    }
+    return articleLastUpdated;	
 }
 
 #pragma mark -
@@ -55,18 +69,13 @@
 	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
 																							target:self 
 																							action:@selector(refresh)] autorelease];
+	if (self.articleLastUpdated == nil) {
+		[self parseArticles];
+	}
 	
-	// Parse
-	NSURL *feedURL = [NSURL URLWithString:@"http://www.sgucblog.com/feed/"];
-	feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
-	feedParser.delegate = self;
-	feedParser.feedParseType = ParseTypeFull; // Parse feed info and all items
-	feedParser.connectionType = ConnectionTypeAsynchronously;
-	[feedParser parse];
 	self.tableView.userInteractionEnabled = NO;
 	self.tableView.alpha = 0.3;
 }
-
 
 // Implement viewWillAppear: to do additional setup before the view is presented.
 - (void)viewWillAppear:(BOOL)animated {
@@ -91,6 +100,16 @@
 	self.tableView.alpha = 0.3;
 }
 
+-(void) parseArticles {
+	// Parse
+	NSURL *feedURL = [NSURL URLWithString:@"http://www.sgucblog.com/feed/"];
+	feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
+	feedParser.delegate = self;
+	feedParser.feedParseType = ParseTypeFull; // Parse feed info and all items
+	feedParser.connectionType = ConnectionTypeAsynchronously;
+	[feedParser parse];
+}
+
 #pragma mark -
 #pragma mark MWFFeed Parser Delegate
 
@@ -102,10 +121,29 @@
 }
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
-	if (item) [parsedItems addObject:item];	
+	if (item){
+		NSMutableDictionary *itemToSave = [[NSMutableDictionary alloc] init];
+		[parsedItems addObject:item];
+		NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
+		NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
+		NSString *itemLink = item.link ? item.link : @"[No Link]";
+		[itemToSave setObject:itemTitle forKey:@"title"];
+		[itemToSave setObject:@"article" forKey:@"feedType"];
+		[itemToSave setObject:item.date forKey:@"publishedOn"];
+		[itemToSave setObject:itemSummary forKey:@"summary"];
+		[itemToSave setObject:itemLink forKey:@"feedLink"];
+		
+		[self insertNewObject:itemToSave];
+		[itemToSave release];
+	}
 }
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser {
+	//Set it to today
+	NSDate *myDate = [NSDate date];
+	[[NSUserDefaults standardUserDefaults] setObject:myDate forKey:@"ArticleLastUpdated"];
+	self.articleLastUpdated = myDate;
+	
 	self.itemsToDisplay = [parsedItems sortedArrayUsingDescriptors:
 						   [NSArray arrayWithObject:[[[NSSortDescriptor alloc] initWithKey:@"date" 
 																				 ascending:NO] autorelease]]];
@@ -127,24 +165,37 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
-    //NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+	cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+	cell.textLabel.text = [[managedObject valueForKey:@"title"] description];
+	
+	NSMutableString *subtitle = [NSMutableString string];
+	NSDate *itemDate = [[[managedObject valueForKey:@"publishedOn"] description] copy];
+	NSLog(@"%@", [itemDate description]);
+	NSDateFormatter *dateFormatter = [[NSFormatter alloc] init];
+	[subtitle appendFormat:@"%@: ", [dateFormatter stringFromDate:itemDate]];
+	[dateFormatter release];
+	[itemDate release];
+	[subtitle appendString:[[managedObject valueForKey:@"summary"] description]];
+	cell.detailTextLabel.text = subtitle;
+	
     //cell.textLabel.text = [[managedObject valueForKey:@"timeStamp"] description];
 	
-	MWFeedItem *item = [itemsToDisplay objectAtIndex:indexPath.row];
-	if (item) {
-		// Process
-		NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
-		NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
-		
-		// Set
-		cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-		cell.textLabel.text = itemTitle;
-		NSMutableString *subtitle = [NSMutableString string];
-		if (item.date) [subtitle appendFormat:@"%@: ", [formatter stringFromDate:item.date]];
-		[subtitle appendString:itemSummary];
-		cell.detailTextLabel.text = subtitle;
-		
-	}
+//	MWFeedItem *item = [itemsToDisplay objectAtIndex:indexPath.row];
+//	if (item) {
+//		// Process
+//		NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
+//		NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
+//		
+//		// Set
+//		cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+//		cell.textLabel.text = itemTitle;
+//		NSMutableString *subtitle = [NSMutableString string];
+//		if (item.date) [subtitle appendFormat:@"%@: ", [formatter stringFromDate:item.date]];
+//		[subtitle appendString:itemSummary];
+//		cell.detailTextLabel.text = subtitle;
+//		
+//	}
 	
     //cell.detailTextLabel.text = [dateFormatter stringFromDate:[[items objectAtIndex:indexPath.row] objectForKey:@"date"]];  
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;  
@@ -153,17 +204,18 @@
 
 #pragma mark -
 #pragma mark Add a new object
-
-- (void)insertNewObject {
-    
+- (void)insertNewObject:(NSMutableDictionary *) itemToSave {
     // Create a new instance of the entity managed by the fetched results controller.
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    
-    // If appropriate, configure the new managed object.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    
+    Feed *feed = (Feed *)[NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+	
+	feed.title = [itemToSave objectForKey:@"title"];
+	feed.feedType = [itemToSave objectForKey:@"feedType"];
+	feed.feedLink = [itemToSave objectForKey:@"feedLink"];
+	feed.summary = [itemToSave objectForKey:@"summary"];
+	feed.publishedOn = [itemToSave objectForKey:@"publishedOn"];
+	
     // Save the context.
     NSError *error = nil;
     if (![context save:&error]) {
@@ -181,15 +233,13 @@
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //return [[self.fetchedResultsController sections] count];
-	return 1;
+    return [[self.fetchedResultsController sections] count];
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-//    return [sectionInfo numberOfObjects];
-	return self.itemsToDisplay.count;
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+	return [sectionInfo numberOfObjects];
 }
 
 
@@ -240,14 +290,14 @@
     // Create the fetch request for the entity.
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Feed" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"publishedOn" ascending:NO];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];

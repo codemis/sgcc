@@ -19,6 +19,7 @@
 	// Displaying
 	NSArray *itemsToDisplay;
 	NSDateFormatter *formatter;
+	NSDate *articleLastUpdated;
 @private
     NSFetchedResultsController *fetchedResultsController_;
     NSManagedObjectContext *managedObjectContext_;
@@ -28,5 +29,8 @@
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, retain) NSArray *itemsToDisplay;
+@property (nonatomic, retain) NSDate *articleLastUpdated;
+
+- (NSDate *) articleLastUpdated;
 
 @end

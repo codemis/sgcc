@@ -52,6 +52,8 @@
 		667B00D41339AE6D00790320 /* EventsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 667B00D21339AE6D00790320 /* EventsWebViewController.m */; };
 		667B00D51339AE6D00790320 /* EventsWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667B00D31339AE6D00790320 /* EventsWebViewController.xib */; };
 		66D0D6CC13385CC6009111B6 /* ArticleDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D0D6CB13385CC6009111B6 /* ArticleDetailsViewController.m */; };
+		66DA31F6134D61DC00356C53 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DA31F5134D61DC00356C53 /* Feed.m */; };
+		66DA31F8134D645F00356C53 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 66DA31F7134D645F00356C53 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,9 @@
 		667B00D31339AE6D00790320 /* EventsWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EventsWebViewController.xib; path = Classes/EventsWebViewController.xib; sourceTree = "<group>"; };
 		66D0D6CA13385CC6009111B6 /* ArticleDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailsViewController.h; sourceTree = "<group>"; };
 		66D0D6CB13385CC6009111B6 /* ArticleDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailsViewController.m; sourceTree = "<group>"; };
+		66DA31F4134D61DC00356C53 /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		66DA31F5134D61DC00356C53 /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		66DA31F7134D645F00356C53 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* SanGabrielUnionChurch-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SanGabrielUnionChurch-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +224,7 @@
 				6620DA51133D9501004FE72B /* Icon.png */,
 				6620DA52133D9501004FE72B /* Icon@2x.png */,
 				8D1107310486CEB800E47090 /* SanGabrielUnionChurch-Info.plist */,
+				66DA31F7134D645F00356C53 /* Settings.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -375,6 +381,7 @@
 				664B24AC134180F5005676EA /* TwoWaysView.xib in Resources */,
 				664B255C134423F4005676EA /* WhoWeAreView.xib in Resources */,
 				664B25A013442EF2005676EA /* BeliefsView.xib in Resources */,
+				66DA31F8134D645F00356C53 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +411,7 @@
 				664B24AB134180F5005676EA /* TwoWaysViewController.m in Sources */,
 				664B255B134423F4005676EA /* WhoWeAreViewController.m in Sources */,
 				664B259F13442EF2005676EA /* BeliefsViewController.m in Sources */,
+				66DA31F6134D61DC00356C53 /* Feed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +499,8 @@
 		28D3F201112F7DC200FD0661 /* SanGabrielUnionChurch.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				66DA31F4134D61DC00356C53 /* Feed.h */,
+				66DA31F5134D61DC00356C53 /* Feed.m */,
 				28860B760F44E54D00985440 /* SanGabrielUnionChurch.xcdatamodel */,
 			);
 			currentVersion = 28860B760F44E54D00985440 /* SanGabrielUnionChurch.xcdatamodel */;
