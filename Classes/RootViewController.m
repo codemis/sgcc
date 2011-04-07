@@ -27,7 +27,6 @@
 
 - (void)dealloc {
 	[activityIndicator release];
-	[formatter release];
 	[parsedItems release];
 	[itemsToDisplay release];
 	[feedParser release];
@@ -60,8 +59,6 @@
     [indicator stopAnimating];  
     self.activityIndicator = indicator;  
     [indicator release];
-	formatter = [[NSDateFormatter alloc] init];
-	[formatter setDateStyle:NSDateFormatterShortStyle];
 	parsedItems = [[NSMutableArray alloc] init];
 	self.itemsToDisplay = [NSArray array];
 	
@@ -171,33 +168,13 @@
 	
 	NSMutableString *subtitle = [NSMutableString string];
 	NSDate *itemDate = [[[managedObject valueForKey:@"publishedOn"] description] copy];
-	NSLog(@"%@", [itemDate description]);
-	NSDateFormatter *dateFormatter = [[NSFormatter alloc] init];
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setDateStyle:NSDateFormatterShortStyle];
 	[subtitle appendFormat:@"%@: ", [dateFormatter stringFromDate:itemDate]];
 	[dateFormatter release];
 	[itemDate release];
 	[subtitle appendString:[[managedObject valueForKey:@"summary"] description]];
 	cell.detailTextLabel.text = subtitle;
-	
-    //cell.textLabel.text = [[managedObject valueForKey:@"timeStamp"] description];
-	
-//	MWFeedItem *item = [itemsToDisplay objectAtIndex:indexPath.row];
-//	if (item) {
-//		// Process
-//		NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
-//		NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
-//		
-//		// Set
-//		cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-//		cell.textLabel.text = itemTitle;
-//		NSMutableString *subtitle = [NSMutableString string];
-//		if (item.date) [subtitle appendFormat:@"%@: ", [formatter stringFromDate:item.date]];
-//		[subtitle appendString:itemSummary];
-//		cell.detailTextLabel.text = subtitle;
-//		
-//	}
-	
-    //cell.detailTextLabel.text = [dateFormatter stringFromDate:[[items objectAtIndex:indexPath.row] objectForKey:@"date"]];  
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;  
 }
 
