@@ -18,6 +18,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 -(void) parseArticles;
 - (void)insertNewObject:(NSMutableDictionary *) itemToSave;
+-(void) updateTextForPullToUpdate;
 @end
 
 
@@ -52,6 +53,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	[self updateTextForPullToUpdate];
 	// Setup
 	parsedItems = [[NSMutableArray alloc] init];
 	self.itemsToDisplay = [NSArray array];
@@ -82,17 +84,12 @@
 
 // Reset and reparse
 - (void)refresh {
-	self.title = @"Refreshing...";
-	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
-    indicator.hidesWhenStopped = YES;  
-    [indicator stopAnimating];  
-    self.activityIndicator = indicator;  
-    [indicator release];
-	[parsedItems removeAllObjects];
-	[feedParser stopParsing];
-	[feedParser parse];
+	self.title = @"Updating...";
 	self.tableView.userInteractionEnabled = NO;
 	self.tableView.alpha = 0.3;
+	[self parseArticles];
+	
+    [self stopLoading];
 }
 
 -(void) parseArticles {
@@ -103,8 +100,18 @@
 	feedParser.feedParseType = ParseTypeFull; // Parse feed info and all items
 	feedParser.connectionType = ConnectionTypeAsynchronously;
 	[feedParser parse];
+	self.title = @"Pastor's Blog";
 }
 
+-(void) updateTextForPullToUpdate{
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setDateFormat:@"MMM d @ h:mm a"];
+	self.textPull = [NSString stringWithFormat:@"Pull to Update. Updated: %@", [dateFormatter stringFromDate:self.articleLastUpdated]];
+	self.textLoading = @"Updating...";
+	self.textRelease = @"Release to update!";
+	
+	[dateFormatter release];	
+}
 #pragma mark -
 #pragma mark MWFFeed Parser Delegate
 
@@ -112,24 +119,26 @@
 }
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info {
-	self.title = @"Pastor's Blog";
 }
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
 	if (item){
-		NSMutableDictionary *itemToSave = [[NSMutableDictionary alloc] init];
-		[parsedItems addObject:item];
-		NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
-		NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
-		NSString *itemLink = item.link ? item.link : @"[No Link]";
-		[itemToSave setObject:itemTitle forKey:@"title"];
-		[itemToSave setObject:@"article" forKey:@"feedType"];
-		[itemToSave setObject:item.date forKey:@"publishedOn"];
-		[itemToSave setObject:itemSummary forKey:@"summary"];
-		[itemToSave setObject:itemLink forKey:@"feedLink"];
-		
-		[self insertNewObject:itemToSave];
-		[itemToSave release];
+		// If never updated, or if updated then only save new stuff
+		if (self.articleLastUpdated == nil || (self.articleLastUpdated != nil && [self.articleLastUpdated compare:item.date] == NSOrderedAscending)) {
+			NSMutableDictionary *itemToSave = [[NSMutableDictionary alloc] init];
+			[parsedItems addObject:item];
+			NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
+			NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
+			NSString *itemLink = item.link ? item.link : @"[No Link]";
+			[itemToSave setObject:itemTitle forKey:@"title"];
+			[itemToSave setObject:@"article" forKey:@"feedType"];
+			[itemToSave setObject:item.date forKey:@"publishedOn"];
+			[itemToSave setObject:itemSummary forKey:@"summary"];
+			[itemToSave setObject:itemLink forKey:@"feedLink"];
+			
+			[self insertNewObject:itemToSave];
+			[itemToSave release];			
+		}
 	}
 }
 
@@ -138,6 +147,7 @@
 	NSDate *myDate = [NSDate date];
 	[[NSUserDefaults standardUserDefaults] setObject:myDate forKey:@"ArticleLastUpdated"];
 	self.articleLastUpdated = myDate;
+	[self updateTextForPullToUpdate];
 	
 	self.itemsToDisplay = [parsedItems sortedArrayUsingDescriptors:
 						   [NSArray arrayWithObject:[[[NSSortDescriptor alloc] initWithKey:@"date" 
@@ -160,18 +170,14 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
-    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Feed *feed = (Feed *)[self.fetchedResultsController objectAtIndexPath:indexPath];
 	cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-	cell.textLabel.text = [[managedObject valueForKey:@"title"] description];
+	cell.textLabel.text = feed.title;
 	
-	NSMutableString *subtitle = [NSMutableString string];
-	NSDate *itemDate = [[[managedObject valueForKey:@"publishedOn"] description] copy];
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateStyle:NSDateFormatterShortStyle];
-	[subtitle appendFormat:@"%@: ", [dateFormatter stringFromDate:itemDate]];
+	NSString *subtitle = [NSString stringWithFormat:@"%@: %@", [dateFormatter stringFromDate:feed.publishedOn], feed.summary];
 	[dateFormatter release];
-	[itemDate release];
-	[subtitle appendString:[[managedObject valueForKey:@"summary"] description]];
 	cell.detailTextLabel.text = subtitle;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;  
 }
@@ -241,7 +247,8 @@
     // Navigation logic may go here -- for example, create and push another view controller.
 	// Show detail
 	ArticleDetailsViewController *detail = [[ArticleDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped];
-	detail.item = (MWFeedItem *)[itemsToDisplay objectAtIndex:indexPath.row];
+	Feed *feed = (Feed *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+	detail.item = feed;
 	[self.navigationController pushViewController:detail animated:YES];
 	[detail release];
 	

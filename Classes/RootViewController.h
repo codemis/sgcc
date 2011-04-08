@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "MWFeedParser.h"
+#import "PullRefreshTableViewController.h"
 
-@interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate, MWFeedParserDelegate> {
+@interface RootViewController : PullRefreshTableViewController <NSFetchedResultsControllerDelegate, MWFeedParserDelegate> {
 	UIActivityIndicatorView *activityIndicator; 
 	// Parsing
 	MWFeedParser *feedParser;

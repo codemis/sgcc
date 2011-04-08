@@ -42,7 +42,7 @@ typedef enum { SectionDetailSummary } DetailRows;
 		NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 		[formatter setDateStyle:NSDateFormatterMediumStyle];
 		[formatter setTimeStyle:NSDateFormatterMediumStyle];
-		self.dateString = [formatter stringFromDate:self.item.date];
+		self.dateString = [formatter stringFromDate:self.item.publishedOn];
 		[formatter release];
 	}
 	
