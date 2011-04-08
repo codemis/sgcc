@@ -53,25 +53,23 @@
     [super viewDidLoad];
 	
 	// Setup
-	self.title = @"Loading...";
-	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
-    indicator.hidesWhenStopped = YES;  
-    [indicator stopAnimating];  
-    self.activityIndicator = indicator;  
-    [indicator release];
 	parsedItems = [[NSMutableArray alloc] init];
 	self.itemsToDisplay = [NSArray array];
 	
-	// Refresh button
-	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
-																							target:self 
-																							action:@selector(refresh)] autorelease];
 	if (self.articleLastUpdated == nil) {
+		self.title = @"Loading...";
+		UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
+		indicator.hidesWhenStopped = YES;    
+		self.activityIndicator = indicator;  
+		[indicator release];
+		
+		self.tableView.userInteractionEnabled = NO;
+		self.tableView.alpha = 0.3;
 		[self parseArticles];
+	}else {
+		self.title = @"Pastor's Blog";
 	}
-	
-	self.tableView.userInteractionEnabled = NO;
-	self.tableView.alpha = 0.3;
+
 }
 
 // Implement viewWillAppear: to do additional setup before the view is presented.
