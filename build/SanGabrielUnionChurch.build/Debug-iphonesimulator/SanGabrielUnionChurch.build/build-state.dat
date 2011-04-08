@@ -1,7 +1,7 @@
 TSanGabrielUnionChurch
 v7
 r0
-t323844911.655689
+t323882080.027343
 cCheck dependencies
 cProcessInfoPlistFile /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/Info.plist SanGabrielUnionChurch-Info.plist
 cCompileXIB /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/MainWindow.xib
@@ -26,7 +26,6 @@ cCpResource build/Debug-iphonesimulator/SanGabrielUnionChurch.app/sermons@2x.png
 cCompileXIB /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/TwoWaysView.xib
 cCompileXIB /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/WhoWeAreView.xib
 cCompileXIB /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/BeliefsView.xib
-cCpResource build/Debug-iphonesimulator/SanGabrielUnionChurch.app/Settings.bundle Settings.bundle
 cProcessPCH /var/folders/ea/eaBp3d4DFqumYGaQIYZ3Hk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/SanGabrielUnionChurch_Prefix-difepmdlieqnsxdxfjhtmzwdvtkg/SanGabrielUnionChurch_Prefix.pch.gch SanGabrielUnionChurch_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 cDataModelVersionCompile /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch.momd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/SanGabrielUnionChurch.xcdatamodeld
 cCompileC build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/main.o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
@@ -47,7 +46,6 @@ cCompileC build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnio
 cCompileC build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/TwoWaysViewController.o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/TwoWaysViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/WhoWeAreViewController.o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/WhoWeAreViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/BeliefsViewController.o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/BeliefsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/Feed.o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/SanGabrielUnionChurch.xcdatamodeld/Feed.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch normal i386
 cGenerateDSYMFile /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app.dSYM /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch
 cTouch /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app
@@ -391,16 +389,16 @@ t1301028425
 s6275
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/RootViewController.h
-c000000004D9D442500000000000003B4
-t1302152229
+c000000004D9D46CB00000000000003B4
+t1302152907
 s948
 i<UIKit/UIKit.h>
 i<CoreData/CoreData.h>
 i"MWFeedParser.h"
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/RootViewController.m
-c000000004D9D442500000000000031E2
-t1302152229
+c000000004D9D46CB00000000000031E2
+t1302152907
 s12770
 i"RootViewController.h"
 i"NSString+HTML.h"
@@ -598,11 +596,11 @@ t1301186061
 s3188
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app
-t1302152229
+t1302152907
 s1054
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app.dSYM
-t1302152111
+t1302152920
 s102
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/AboutUsView.nib
@@ -662,11 +660,11 @@ t1301110585
 s979
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch
-t1302152229
+t1302152907
 s207056
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch.momd
-t1302152229
+t1302152907
 s136
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SermonsView.nib
@@ -814,16 +812,16 @@ t1301029170
 s48080
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/RootViewController.o
-t1302152229
+t1302152907
 s84184
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/SanGabrielUnionChurch.LinkFileList
-c000000004D9D44250000000000000C96
-t1302152229
+c000000004D9D46CB0000000000000C96
+t1302152907
 s3222
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/SanGabrielUnionChurchAppDelegate.o
-t1302152229
+t1302152907
 s75300
 
 N/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/SermonDetailsViewController.o
@@ -1161,7 +1159,7 @@ lSLF07#2@67"Analyze /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/main.m3
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies323844911#323844911#0(0"0(0#1#0"8616320192#0"0#
+lSLF07#2@18"Check dependencies323882079#323882080#0(0"0(0#1#0"4858943546592685056#0"0#
 
 CCompileC build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/AboutUsViewController.o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/AboutUsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s323237090.040486
@@ -1405,8 +1403,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@95"Compile /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/PlaySermonViewController.m322721970#322721970#0(0"0(0#0#87"/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/PlaySermonViewController.m8612535808#2396"    cd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-generated-files.hmap -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-own-target-headers.hmap -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-all-target-headers.hmap -iquote /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-project-headers.hmap -F/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/include -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/DerivedSources/i386 -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/DerivedSources -include /var/folders/ea/eaBp3d4DFqumYGaQIYZ3Hk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/SanGabrielUnionChurch_Prefix-difepmdlieqnsxdxfjhtmzwdvtkg/SanGabrielUnionChurch_Prefix.pch -c /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/PlaySermonViewController.m -o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/PlaySermonViewController.o0#
 
 CCompileC build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/RootViewController.o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s323844911.413139
-e323844911.547257
+s323845375.493679
+e323845375.624494
 r1
 xCompileC
 xbuild/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/RootViewController.o
@@ -1415,7 +1413,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@89"Compile /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/RootViewController.m323844911#323844911#0(0"0(0#0#81"/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/RootViewController.m8622521184#2384"    cd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-generated-files.hmap -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-own-target-headers.hmap -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-all-target-headers.hmap -iquote /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-project-headers.hmap -F/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/include -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/DerivedSources/i386 -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/DerivedSources -include /var/folders/ea/eaBp3d4DFqumYGaQIYZ3Hk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/SanGabrielUnionChurch_Prefix-difepmdlieqnsxdxfjhtmzwdvtkg/SanGabrielUnionChurch_Prefix.pch -c /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/RootViewController.m -o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/RootViewController.o0#
+lSLF07#2@89"Compile /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/RootViewController.m323845375#323845375#0(0"0(0#0#81"/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/RootViewController.m8615644704#2384"    cd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-generated-files.hmap -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-own-target-headers.hmap -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-all-target-headers.hmap -iquote /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-project-headers.hmap -F/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/include -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/DerivedSources/i386 -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/DerivedSources -include /var/folders/ea/eaBp3d4DFqumYGaQIYZ3Hk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/SanGabrielUnionChurch_Prefix-difepmdlieqnsxdxfjhtmzwdvtkg/SanGabrielUnionChurch_Prefix.pch -c /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/RootViewController.m -o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/RootViewController.o0#
 
 CCompileC build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/SanGabrielUnionChurchAppDelegate.o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/Classes/SanGabrielUnionChurchAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s323842116.184014
@@ -1749,23 +1747,23 @@ x/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/SanGabrielUnionChurch.xcda
 lSLF07#2@139"DataModelVersionCompile build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch.momd SanGabrielUnionChurch.xcdatamodeld323843231#323843231#0(0"0(0#0#87"/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/SanGabrielUnionChurch.xcdatamodeld8617092576#470"    cd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/SanGabrielUnionChurch.xcdatamodeld /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch.momd0#
 
 CGenerateDSYMFile /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app.dSYM /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch
-s323844911.607609
-e323844911.650687
+s323845720.922983
+e323845720.973196
 r1
 xGenerateDSYMFile
 x/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app.dSYM
 x/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch
-lSLF07#2@151"GenerateDSYMFile build/Debug-iphonesimulator/SanGabrielUnionChurch.app.dSYM build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch323844911#323844911#0(0"0(0#0#128"/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch8622600832#467"    cd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch -o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app.dSYM0#
+lSLF07#2@151"GenerateDSYMFile build/Debug-iphonesimulator/SanGabrielUnionChurch.app.dSYM build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch323845720#323845720#0(0"0(0#0#128"/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch8620053088#467"    cd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch -o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app.dSYM0#
 
 CLd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch normal i386
-s323844911.547344
-e323844911.607489
+s323845375.624582
+e323845375.686129
 r1
 xLd
 x/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch
 xnormal
 xi386
-lSLF07#2@133"Link /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch323844911#323844911#0(0"0(0#0#0"8619617888#1060"    cd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator -F/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator -filelist /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/SanGabrielUnionChurch.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch0#
+lSLF07#2@133"Link /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch323845375#323845375#0(0"0(0#0#0"8612241280#1060"    cd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator -F/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator -filelist /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/Objects-normal/i386/SanGabrielUnionChurch.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/SanGabrielUnionChurch0#
 
 CProcessInfoPlistFile /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app/Info.plist SanGabrielUnionChurch-Info.plist
 s322803384.346692
@@ -1803,10 +1801,10 @@ xcom.apple.compilers.llvm.clang.1_0.analyzer
 lSLF07#2@43"Precompile SanGabrielUnionChurch_Prefix.pch322460179#322460180#0(0"0(0#0#85"/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/SanGabrielUnionChurch_Prefix.pch8634729920#2203"    cd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-generated-files.hmap -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-own-target-headers.hmap -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-all-target-headers.hmap -iquote /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/SanGabrielUnionChurch-project-headers.hmap -F/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/include -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/DerivedSources/i386 -I/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/SanGabrielUnionChurch.build/Debug-iphonesimulator/SanGabrielUnionChurch.build/DerivedSources -c /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/SanGabrielUnionChurch_Prefix.pch -o /var/folders/ea/eaBp3d4DFqumYGaQIYZ3Hk+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/SanGabrielUnionChurch_Prefix-gmvyulpjczwquwbxmdwlszoqdpgj/SanGabrielUnionChurch_Prefix.pch.pth0#
 
 CTouch /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app
-s323844911.650786
-e323844911.655644
+s323845375.729314
+e323845375.732228
 r1
 xTouch
 x/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app
-lSLF07#2@112"Touch /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app323844911#323844911#0(0"0(0#0#0"8621101184#320"    cd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app0#
+lSLF07#2@112"Touch /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app323845375#323845375#0(0"0(0#0#0"8620078048#320"    cd /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/build/Debug-iphonesimulator/SanGabrielUnionChurch.app0#
 

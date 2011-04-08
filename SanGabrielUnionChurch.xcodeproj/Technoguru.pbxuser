@@ -90,8 +90,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 323845041;
-			PBXWorkspaceStateSaveDate = 323845041;
+			PBXPerProjectTemplateStateSaveDate = 323882065;
+			PBXWorkspaceStateSaveDate = 323882065;
 		};
 		perUserProjectItems = {
 			661BDDBE13462CC100CF7838 /* PBXTextBookmark */ = 661BDDBE13462CC100CF7838 /* PBXTextBookmark */;
@@ -117,9 +117,9 @@
 			664B25B1134431CB005676EA /* PBXTextBookmark */ = 664B25B1134431CB005676EA /* PBXTextBookmark */;
 			664B25CC1344C821005676EA /* PBXTextBookmark */ = 664B25CC1344C821005676EA /* PBXTextBookmark */;
 			667B01221339B58400790320 /* PBXTextBookmark */ = 667B01221339B58400790320 /* PBXTextBookmark */;
+			6690CDFB134E0C5800B935B6 /* PBXBookmark */ = 6690CDFB134E0C5800B935B6 /* PBXBookmark */;
+			6690CE04134E0DED00B935B6 /* PBXTextBookmark */ = 6690CE04134E0DED00B935B6 /* PBXTextBookmark */;
 			66D0D6E81338E416009111B6 /* PBXTextBookmark */ = 66D0D6E81338E416009111B6 /* PBXTextBookmark */;
-			66DA32DA134D7BD900356C53 /* PBXBookmark */ = 66DA32DA134D7BD900356C53 /* PBXBookmark */;
-			66DA32DB134D7BD900356C53 /* PBXTextBookmark */ = 66DA32DB134D7BD900356C53 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 66D0D60D133831DD009111B6 /* Source Control */;
 		userBuildSettings = {
@@ -502,6 +502,20 @@
 		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINavigationController.h;
 		sourceTree = "<absolute>";
 	};
+	6690CDFB134E0C5800B935B6 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+	};
+	6690CE04134E0DED00B935B6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 48";
+		rLen = 98;
+		rLoc = 1270;
+		rType = 0;
+		vrLen = 2086;
+		vrLoc = 3041;
+	};
 	66D0D5F4133831D4009111B6 /* SanGabrielUnionChurch */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -574,19 +588,5 @@
 		rType = 0;
 		vrLen = 2374;
 		vrLoc = 0;
-	};
-	66DA32DA134D7BD900356C53 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-	};
-	66DA32DB134D7BD900356C53 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 48";
-		rLen = 98;
-		rLoc = 1270;
-		rType = 0;
-		vrLen = 2086;
-		vrLoc = 3041;
 	};
 }

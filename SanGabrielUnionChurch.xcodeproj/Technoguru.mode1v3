@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -310,8 +312,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -329,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>66DA32DB134D7BD900356C53</string>
+										<string>6690CE04134E0DED00B935B6</string>
 										<key>history</key>
 										<array>
 											<string>66D0D6E81338E416009111B6</string>
@@ -356,7 +356,7 @@
 											<string>664B25CC1344C821005676EA</string>
 											<string>661BDDBE13462CC100CF7838</string>
 											<string>661BDDBF13462CC100CF7838</string>
-											<string>66DA32DA134D7BD900356C53</string>
+											<string>6690CDFB134E0C5800B935B6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -414,9 +414,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>66DA32DC134D7BD900356C53</string>
+				<string>6690CDFD134E0C5800B935B6</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>66DA32DD134D7BD900356C53</string>
+				<string>6690CDFE134E0C5800B935B6</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -554,8 +554,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>66D0D60B133831DD009111B6</string>
 		<string>/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/SanGabrielUnionChurch.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>54 55 1386 823 0 0 1440 878 </string>
@@ -635,7 +637,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>66D0D60B133831DD009111B6</string>
-				<string>66DA32DE134D7BD900356C53</string>
+				<string>6690CDFF134E0C5800B935B6</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -757,13 +759,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>66DA3231134D692500356C53</string>
+				<string>6690CE05134E0DED00B935B6</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>66DA3232134D692500356C53</string>
-				<string>66DA3233134D692500356C53</string>
-				<string>66DA3234134D692500356C53</string>
-				<string>66DA3235134D692500356C53</string>
-				<string>66DA3236134D692500356C53</string>
+				<string>6690CE06134E0DED00B935B6</string>
+				<string>6690CE07134E0DED00B935B6</string>
+				<string>6690CE08134E0DED00B935B6</string>
+				<string>6690CE09134E0DED00B935B6</string>
+				<string>6690CE0A134E0DED00B935B6</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -927,7 +929,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>66DA3237134D692500356C53</string>
+				<string>6690CE0B134E0DED00B935B6</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
