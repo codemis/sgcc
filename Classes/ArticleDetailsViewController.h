@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Feed.h"
-@interface ArticleDetailsViewController : UITableViewController {
+@interface ArticleDetailsViewController : UIViewController {
 	Feed *item;
-	NSString *dateString, *summaryString, *contentString;
 }
 @property (nonatomic, retain) Feed *item;
+@property (nonatomic, retain) IBOutlet UIWebView *myWebView;
 @end

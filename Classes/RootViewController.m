@@ -249,7 +249,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here -- for example, create and push another view controller.
 	// Show detail
-	ArticleDetailsViewController *detail = [[ArticleDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	ArticleDetailsViewController *detail = [[ArticleDetailsViewController alloc] init];
 	Feed *feed = (Feed *)[self.fetchedResultsController objectAtIndexPath:indexPath];
 	detail.item = feed;
 	[self.navigationController pushViewController:detail animated:YES];
