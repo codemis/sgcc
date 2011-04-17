@@ -17,5 +17,6 @@
 @dynamic publishedOn;
 @dynamic summary;
 @dynamic feedLink;
+@dynamic content;
 
 @end

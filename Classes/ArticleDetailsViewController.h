@@ -7,14 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MWFeedItem.h"
-
-
+#import "Feed.h"
 @interface ArticleDetailsViewController : UITableViewController {
-	MWFeedItem *item;
+	Feed *item;
 	NSString *dateString, *summaryString, *contentString;
 }
-@property (nonatomic, retain) MWFeedItem *item;
-@property (nonatomic, retain) NSString *dateString, *summaryString, *contentString;
-
+@property (nonatomic, retain) Feed *item;
 @end

@@ -19,6 +19,7 @@
 @property (nonatomic, retain) NSDate * publishedOn;
 @property (nonatomic, retain) NSString * summary;
 @property (nonatomic, retain) NSString * feedLink;
+@property (nonatomic, retain) NSString * content;
 
 @end
 

@@ -13,13 +13,10 @@ typedef enum { SectionHeaderTitle, SectionHeaderDate, SectionHeaderURL } HeaderR
 typedef enum { SectionDetailSummary } DetailRows;
 
 @implementation ArticleDetailsViewController
-@synthesize item, dateString, summaryString, contentString;
+@synthesize item;
 
 - (void)dealloc {
 	[item release];
-	[dateString release];
-	[summaryString release];
-	[contentString release];
     [super dealloc];
 }
 
@@ -37,28 +34,6 @@ typedef enum { SectionDetailSummary } DetailRows;
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Date
-	if (item.date) {
-		NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-		[formatter setDateStyle:NSDateFormatterMediumStyle];
-		[formatter setTimeStyle:NSDateFormatterMediumStyle];
-		self.dateString = [formatter stringFromDate:self.item.publishedOn];
-		[formatter release];
-	}
-	
-	// Summary
-	if (item.summary) {
-		self.summaryString = [self.item.summary stringByConvertingHTMLToPlainText];
-	} else {
-		self.summaryString = @"[No Summary]";
-	}
-	
-	// Summary
-	if (item.content) {
-		self.contentString = [self.item.content stringByConvertingHTMLToPlainText];
-	} else {
-		self.contentString = @"";
-	}
 }
 
 #pragma mark -
@@ -93,10 +68,8 @@ typedef enum { SectionDetailSummary } DetailRows;
 	cell.textLabel.textColor = [UIColor blackColor];
 	cell.textLabel.font = [UIFont systemFontOfSize:15];
 	if (item) {
-		
-		// Item Info
-		NSString *itemTitle = self.item.title ? [self.item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
-		
+		NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+		[dateFormatter setDateStyle:NSDateFormatterMediumStyle];
 		// Display
 		switch (indexPath.section) {
 			case SectionHeader: {
@@ -105,13 +78,14 @@ typedef enum { SectionDetailSummary } DetailRows;
 				switch (indexPath.row) {
 					case SectionHeaderTitle:
 						cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-						cell.textLabel.text = itemTitle;
+						cell.textLabel.text = self.item.title;
 						break;
 					case SectionHeaderDate:
-						cell.textLabel.text = self.dateString ? self.dateString : @"[No Date]";
+						cell.textLabel.text = [dateFormatter stringFromDate:self.item.publishedOn];
+						[dateFormatter release];
 						break;
 					case SectionHeaderURL:
-						cell.textLabel.text = self.item.link ? self.item.link : @"[No Link]";
+						cell.textLabel.text = self.item.feedLink;
 						cell.textLabel.textColor = [UIColor blueColor];
 						cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 						break;
@@ -122,7 +96,7 @@ typedef enum { SectionDetailSummary } DetailRows;
 			case SectionDetail: {
 				
 				// content
-				cell.textLabel.text = self.contentString;
+				cell.textLabel.text = self.item.content;
 				cell.textLabel.numberOfLines = 0; // Multiline
 				break;
 				
@@ -143,8 +117,7 @@ typedef enum { SectionDetailSummary } DetailRows;
 	} else {
 		
 		// Get height of content
-		NSString *content = @"";
-		if (contentString) content = self.contentString;
+		NSString *content = self.item.content;
 		CGSize s = [content sizeWithFont:[UIFont systemFontOfSize:15] 
 					   constrainedToSize:CGSizeMake(self.view.bounds.size.width - 40, MAXFLOAT)  // - 40 For cell padding
 						   lineBreakMode:UILineBreakModeWordWrap];
@@ -160,8 +133,8 @@ typedef enum { SectionDetailSummary } DetailRows;
 	
 	// Open URL
 	if (indexPath.section == SectionHeader && indexPath.row == SectionHeaderURL) {
-		if (item.link) {
-			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:item.link]];
+		if (self.item.feedLink) {
+			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.item.feedLink]];
 		}
 	}
 	

@@ -129,12 +129,14 @@
 			[parsedItems addObject:item];
 			NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
 			NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
+			NSString *itemContent = item.content ? [item.content stringByConvertingHTMLToPlainText] : @"[No Content]";
 			NSString *itemLink = item.link ? item.link : @"[No Link]";
 			[itemToSave setObject:itemTitle forKey:@"title"];
 			[itemToSave setObject:@"article" forKey:@"feedType"];
 			[itemToSave setObject:item.date forKey:@"publishedOn"];
 			[itemToSave setObject:itemSummary forKey:@"summary"];
 			[itemToSave setObject:itemLink forKey:@"feedLink"];
+			[itemToSave setObject:itemContent forKey:@"content"];
 			
 			[self insertNewObject:itemToSave];
 			[itemToSave release];			
@@ -196,6 +198,7 @@
 	feed.feedLink = [itemToSave objectForKey:@"feedLink"];
 	feed.summary = [itemToSave objectForKey:@"summary"];
 	feed.publishedOn = [itemToSave objectForKey:@"publishedOn"];
+	feed.content = [itemToSave objectForKey:@"content"];
 	
     // Save the context.
     NSError *error = nil;
