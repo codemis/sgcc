@@ -8,15 +8,18 @@
 
 #import "SermonsViewController.h"
 #import "SermonDetailsViewController.h"
+#import "Feed.h"
+
 @interface SermonsViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (void)insertNewObject:(NSMutableDictionary *) itemToSave;
 -(void) initializeRssFeed;
+-(void) updateTextForPullToUpdate;
 @end
 
 @implementation SermonsViewController
 
 @synthesize responseData;
-@synthesize itemsToDisplay;
 @synthesize item;
 @synthesize currentTitle;
 @synthesize currentDate;
@@ -26,10 +29,12 @@
 @synthesize currentElement;
 @synthesize activityIndicator;
 @synthesize myFeedParser;
+@synthesize fetchedResultsController=fetchedResultsController_;
+@synthesize managedObjectContext=managedObjectContext_;
+@synthesize podcastLastUpdated;
 
 
 - (void)dealloc {
-    [itemsToDisplay release];
 	[item release];
 	[currentTitle release];
 	[currentDate release];
@@ -40,22 +45,33 @@
 	[currentElement release];
 	[activityIndicator release];
 	[myFeedParser release];
+    [fetchedResultsController_ release];
+    [managedObjectContext_ release];
+	[podcastLastUpdated release];
     [super dealloc];
+}
+
+#pragma mark -
+#pragma mark Lazy Loaders
+- (NSDate *) podcastLastUpdated{
+	if (podcastLastUpdated == nil)
+    {
+        self.podcastLastUpdated = [[NSUserDefaults standardUserDefaults] objectForKey:@"PodcastLastUpdated"];
+    }
+    return podcastLastUpdated;	
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
 	
-	NSDictionary *feedItem = [self.itemsToDisplay objectAtIndex:indexPath.row];
-	if (feedItem) {
-		// Process
-		NSString *itemTitle = [feedItem objectForKey:@"title"];
-		NSString *itemAuthor = [feedItem objectForKey:@"author"];
+	Feed *feed = (Feed *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+	
+	if (feed) {
 		
 		// Set
 		NSMutableString *subtitle = [NSMutableString string];
-		[subtitle appendFormat:@"%@ ", itemTitle];
+		[subtitle appendFormat:@"%@ ", feed.title];
 		NSMutableString *detailTitle = [NSMutableString string];
-		[detailTitle appendFormat:@"%@ ", itemAuthor];
+		[detailTitle appendFormat:@"%@ ", feed.summary];
 		cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
 		cell.textLabel.text = subtitle;
 		cell.detailTextLabel.text = detailTitle;
@@ -70,42 +86,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	self.title = @"Loading...";
-	// Refresh button
-	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
-																							target:self 
-																							action:@selector(refresh)] autorelease];
 
-	//Inidicator
-	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
-    indicator.hidesWhenStopped = YES;  
-    [indicator stopAnimating];  
-    self.activityIndicator = indicator;  
-    [indicator release];
+	[self updateTextForPullToUpdate];
 	
-	self.responseData = [[NSMutableData data] retain];  
-	[self initializeRssFeed];
-	self.tableView.userInteractionEnabled = NO;
-	self.tableView.alpha = 0.3;  
-	
+	if (self.podcastLastUpdated == nil) {
+		self.title = @"Loading...";
+		
+		//Inidicator
+		UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
+		indicator.hidesWhenStopped = YES;  
+		[indicator stopAnimating];  
+		self.activityIndicator = indicator;  
+		[indicator release];
+		
+		self.responseData = [[NSMutableData data] retain];  
+		[self initializeRssFeed];
+		self.tableView.userInteractionEnabled = NO;
+		self.tableView.alpha = 0.3;  		
+	}else {
+		self.title = @"SGUC Sermons";
+	}
 }
 
-// Reset and reparse
-- (void)refresh {
-	self.title = @"Refreshing...";
-	//Indicator
-	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
-    indicator.hidesWhenStopped = YES;  
-    [indicator stopAnimating];  
-    self.activityIndicator = indicator;  
-    [indicator release];
+-(void) updateTextForPullToUpdate{
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setDateFormat:@"MMM d @ h:mm a"];
+	self.textPull = [NSString stringWithFormat:@"Pull to Update. Updated: %@", [dateFormatter stringFromDate:self.podcastLastUpdated]];
+	self.textLoading = @"Updating...";
+	self.textRelease = @"Release to update!";
 	
-	[self.responseData release];
-	self.responseData = [[NSMutableData data] retain];  
-	self.tableView.userInteractionEnabled = NO;
-	self.tableView.alpha = 0.3;  
-	[self initializeRssFeed];
+	[dateFormatter release];	
 }
 
 -(void) initializeRssFeed{
@@ -133,8 +143,7 @@
 	[errorAlert release];
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection  { 
-    self.itemsToDisplay = [[NSMutableArray alloc] init];  
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection  {  
 	
     self.myFeedParser = [[NSXMLParser alloc] initWithData:self.responseData];  
 	
@@ -181,34 +190,127 @@
 		[currentAuthor release];
 		[self.item setObject:self.currentSummary forKey:@"summary"];
 		[currentSummary release]; 
-		[self.item setObject:self.currentLink forKey:@"link"]; 
+		[self.item setObject:self.currentLink forKey:@"feedLink"];
+		[self.item setObject:@"podcast" forKey:@"feedType"]; 
+		[self.item setObject:@"" forKey:@"content"];
 		[currentLink release];
-		NSMutableDictionary *itemCopy = [self.item copy];
+		[self insertNewObject:self.item];
 		[item release];
-        [self.itemsToDisplay addObject:itemCopy];
-		[itemCopy release];
     }  
 }  
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
 	self.title = @"SGUC Sermons";
+	//Set it to today
+	NSDate *myDate = [NSDate date];
+	[[NSUserDefaults standardUserDefaults] setObject:myDate forKey:@"PodcastLastUpdated"];
+	self.podcastLastUpdated = myDate;
+	[self updateTextForPullToUpdate];
 	self.tableView.userInteractionEnabled = YES;
 	self.tableView.alpha = 1;
 	[self.tableView reloadData];
 }
 
 #pragma mark -
+#pragma mark Add a new object
+- (void)insertNewObject:(NSMutableDictionary *) itemToSave {
+    // Create a new instance of the entity managed by the fetched results controller.
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+    Feed *feed = (Feed *)[NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+	
+	feed.title = [itemToSave objectForKey:@"title"];
+	feed.feedType = [itemToSave objectForKey:@"feedType"];
+	feed.feedLink = [itemToSave objectForKey:@"feedLink"];
+	feed.summary = [itemToSave objectForKey:@"summary"];
+	//feed.publishedOn = [itemToSave objectForKey:@"publishedOn"];
+	feed.content = [itemToSave objectForKey:@"content"];
+	
+    // Save the context.
+    NSError *error = nil;
+    if (![context save:&error]) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+         */
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
+#pragma mark -
+#pragma mark Fetched results controller
+- (NSFetchedResultsController *)fetchedResultsController {
+    
+    if (fetchedResultsController_ != nil) {
+        return fetchedResultsController_;
+    }
+    
+    /*
+     Set up the fetched results controller.
+	 */
+    // Create the fetch request for the entity.
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Feed" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20]; 
+	
+	//Limit to only Podcast results
+	NSString *attributeName = @"feedType";
+	NSString *attributeValue = @"podcast";
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K like %@",
+							  attributeName, attributeValue];
+	[fetchRequest setPredicate:predicate];
+    
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"publishedOn" ascending:NO];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+	
+	[fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Podcast"];
+    aFetchedResultsController.delegate = self;
+    self.fetchedResultsController = aFetchedResultsController;
+    
+    [aFetchedResultsController release];
+    [fetchRequest release];
+    [sortDescriptor release];
+    [sortDescriptors release];
+    
+    NSError *error = nil;
+    if (![fetchedResultsController_ performFetch:&error]) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+         */
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    return fetchedResultsController_;
+}    
+
+
+#pragma mark -
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return [[self.fetchedResultsController sections] count];
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [self.itemsToDisplay count];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+	return [sectionInfo numberOfObjects];
 }
 
 
@@ -234,12 +336,71 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     SermonDetailsViewController *sermonDetailsVC = [[SermonDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped];
-	sermonDetailsVC.sermon = [self.itemsToDisplay objectAtIndex:indexPath.row];
+	Feed *feed = (Feed *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+	
+	sermonDetailsVC.sermon = feed;
 	[self.navigationController pushViewController:sermonDetailsVC animated:YES];
 	[sermonDetailsVC release];
+	
+	// Deselect
 	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+#pragma mark -
+#pragma mark Fetched results controller delegate
+
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView beginUpdates];
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
+           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+    
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    UITableView *tableView = self.tableView;
+    
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView endUpdates];
+}
 
 #pragma mark -
 #pragma mark Memory management

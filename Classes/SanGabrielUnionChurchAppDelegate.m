@@ -15,6 +15,7 @@
 @synthesize window;
 @synthesize navigationController;
 @synthesize myTabBarController;
+@synthesize sermonsVC;
 
 
 - (void)dealloc {
@@ -25,6 +26,7 @@
     [persistentStoreCoordinator_ release];
     
     [navigationController release];
+	[sermonsVC release];
     [window release];
     [super dealloc];
 }
@@ -42,7 +44,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-
+	self.sermonsVC.managedObjectContext = self.managedObjectContext;
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:myTabBarController.view];
     [self.window makeKeyAndVisible];

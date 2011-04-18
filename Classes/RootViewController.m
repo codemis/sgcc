@@ -82,16 +82,6 @@
 #pragma mark -
 #pragma mark Parsing
 
-// Reset and reparse
-- (void)refresh {
-	self.title = @"Updating...";
-	self.tableView.userInteractionEnabled = NO;
-	self.tableView.alpha = 0.3;
-	[self parseArticles];
-	
-    [self stopLoading];
-}
-
 -(void) parseArticles {
 	// Parse
 	NSURL *feedURL = [NSURL URLWithString:@"http://www.sgucblog.com/feed/"];
@@ -280,6 +270,13 @@
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
+	
+	//Limit to only Podcast results
+	NSString *attributeName = @"feedType";
+	NSString *attributeValue = @"article";
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K like %@",
+							  attributeName, attributeValue];
+	[fetchRequest setPredicate:predicate];
     
     // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"publishedOn" ascending:NO];
@@ -289,7 +286,7 @@
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Articles"];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     

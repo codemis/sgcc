@@ -7,23 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "PullRefreshTableViewController.h"
 
 
-@interface SermonsViewController : UITableViewController <NSXMLParserDelegate>{
+@interface SermonsViewController : PullRefreshTableViewController <NSXMLParserDelegate, NSFetchedResultsControllerDelegate>{
 	NSMutableData *responseData;  
-    NSMutableArray *itemsToDisplay;	
 	UIActivityIndicatorView *activityIndicator;
 	
     NSMutableDictionary *item;  
     NSString *currentElement;  
     NSMutableString *currentTitle, *currentAuthor, *currentLink, *currentSummary;
 	NSDate *currentDate;
+	NSDate *podcastLastUpdated;
 	
 	NSXMLParser *myFeedParser;
+@private
+    NSFetchedResultsController *fetchedResultsController_;
+    NSManagedObjectContext *managedObjectContext_;
 }
 
 @property (nonatomic, retain) NSMutableData *responseData;
-@property (nonatomic, retain) NSMutableArray *itemsToDisplay;
 @property (nonatomic, retain) NSMutableString *currentTitle;
 @property (nonatomic, retain) NSDate *currentDate;
 @property (nonatomic, retain) NSMutableString *currentAuthor;
@@ -33,5 +37,10 @@
 @property (nonatomic, retain) NSMutableDictionary *item;
 @property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, retain) NSXMLParser *myFeedParser;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSDate *podcastLastUpdated;
+
+- (NSDate *) podcastLastUpdated;
 
 @end
