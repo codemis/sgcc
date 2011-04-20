@@ -223,6 +223,7 @@
 	feed.feedType = [itemToSave objectForKey:@"feedType"];
 	feed.feedLink = [itemToSave objectForKey:@"feedLink"];
 	feed.summary = [itemToSave objectForKey:@"summary"];
+	feed.author = [itemToSave objectForKey:@"author"];
 	//feed.publishedOn = [itemToSave objectForKey:@"publishedOn"];
 	feed.content = [itemToSave objectForKey:@"content"];
 	

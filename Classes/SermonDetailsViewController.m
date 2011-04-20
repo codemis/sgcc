@@ -15,26 +15,18 @@ typedef enum { SectionDetailAction } DetailRows;
 @implementation SermonDetailsViewController
 
 @synthesize sermon;
-@synthesize authorString;
-@synthesize summaryString;
-@synthesize titleString;
-@synthesize sermonLink;
 @synthesize playerView;
 
 
 - (void)dealloc {
 	[sermon release];
-	[authorString release];
-	[summaryString release];
-	[titleString release];
-	[sermonLink release];
 	[playerView release];
     [super dealloc];
 }
 
 - (void) playSermon{
-	if (self.sermonLink) {
-		NSURLRequest *request = [[NSURLRequest alloc] initWithURL: [NSURL URLWithString: self.sermonLink] cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 15.0];  
+	if (self.sermon.feedLink) {
+		NSURLRequest *request = [[NSURLRequest alloc] initWithURL: [NSURL URLWithString: self.sermon.feedLink] cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 15.0];  
 		[self.playerView loadRequest: request];  
 		[request release]; 
 	}else { 
@@ -56,13 +48,13 @@ typedef enum { SectionDetailAction } DetailRows;
 			switch (indexPath.row) {
 				case SectionHeaderTitle:
 					cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-					cell.textLabel.text = self.titleString;
+					cell.textLabel.text = self.sermon.title;
 					break;
 				case SectionHeaderAuthor:
-					cell.textLabel.text = self.authorString;
+					cell.textLabel.text = self.sermon.author;
 					break;
 				case SectionHeaderSummary:
-					cell.textLabel.text = self.summaryString;
+					cell.textLabel.text = self.sermon.summary;
 					break;
 			}
 			break;
@@ -99,35 +91,6 @@ typedef enum { SectionDetailAction } DetailRows;
 	[webView release]; 
 	
     [super viewDidLoad];
-	if ([self.sermon objectForKey:@"author"]) {
-		NSString *author = [[NSString alloc] initWithString:[self.sermon objectForKey:@"author"]];
-		self.authorString = author;
-		[author release];
-	}else {
-		self.authorString = @"[No Author]";
-	}
-	if ([self.sermon objectForKey:@"summary"]) {
-		NSString *summary = [[NSString alloc] initWithString:[self.sermon objectForKey:@"summary"]];
-		self.summaryString = summary;
-		[summary release];
-	}else {
-		self.summaryString = @"[No Summary]";
-	}
-	if ([self.sermon objectForKey:@"title"]) {
-		NSString *sermonTitle = [[NSString alloc] initWithString:[self.sermon objectForKey:@"title"]];
-		self.titleString = sermonTitle;
-		self.title = sermonTitle;
-		[sermonTitle release];
-	}else {
-		self.titleString = @"[No Title]";
-	}
-	if ([self.sermon objectForKey:@"link"]) {
-		NSString *linkUrl = [[NSString alloc] initWithString:[self.sermon objectForKey:@"link"]];
-		self.sermonLink = linkUrl;
-		[linkUrl release];
-	}else {
-		self.sermonLink = @"";
-	}
 
 }
 

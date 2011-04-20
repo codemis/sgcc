@@ -7,16 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Feed.h"
 
 @interface SermonDetailsViewController : UITableViewController <UIWebViewDelegate> {
-	NSDictionary *sermon;
-	NSString *authorString, *summaryString, *titleString, *sermonLink;
+	Feed *sermon;
 
 }
 
-@property (nonatomic, retain) NSDictionary *sermon;
-@property (nonatomic, retain) NSString *authorString, *summaryString, *titleString, *sermonLink;
+@property (nonatomic, retain) Feed *sermon;
 @property (nonatomic, retain) UIWebView *playerView;
 
 @end
