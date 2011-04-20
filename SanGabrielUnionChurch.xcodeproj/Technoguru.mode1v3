@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>66B5549B135E84140009CF33</string>
+						<string>66B554DD135E892F0009CF33</string>
 						<key>history</key>
 						<array>
 							<string>66203A44134F64DF00C22ACF</string>
@@ -307,22 +307,18 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>662039A8134EB02C00C22ACF</string>
-								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>28D3F201112F7DC200FD0661</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>34</integer>
-									<integer>31</integer>
 									<integer>30</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 119}, {309, 764}}</string>
+							<string>{{0, 0}, {309, 764}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -371,7 +367,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>66B5549A135E84140009CF33</string>
+										<string>66B554DC135E892F0009CF33</string>
 										<key>history</key>
 										<array>
 											<string>66D0D6E81338E416009111B6</string>
@@ -417,8 +413,8 @@
 											<string>66B55482135E82DE0009CF33</string>
 											<string>66B5548D135E83950009CF33</string>
 											<string>66B55498135E84140009CF33</string>
-											<string>66B55499135E84140009CF33</string>
-											<string>66B5547D135E82DE0009CF33</string>
+											<string>66B554BA135E871A0009CF33</string>
+											<string>66B554BB135E871A0009CF33</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -971,7 +967,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1386, 781}}</string>
 								<key>RubberWindowFrame</key>
-								<string>52 26 1386 822 0 0 1440 878 </string>
+								<string>52 -18 1386 822 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -1000,7 +996,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>52 26 1386 822 0 0 1440 878 </string>
+			<string>52 -18 1386 822 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>

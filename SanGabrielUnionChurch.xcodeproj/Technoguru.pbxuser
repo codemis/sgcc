@@ -489,6 +489,36 @@
 			66B55499135E84140009CF33 /* PBXTextBookmark */ = 66B55499135E84140009CF33 /* PBXTextBookmark */;
 			66B5549A135E84140009CF33 /* PBXTextBookmark */ = 66B5549A135E84140009CF33 /* PBXTextBookmark */;
 			66B5549B135E84140009CF33 /* PBXTextBookmark */ = 66B5549B135E84140009CF33 /* PBXTextBookmark */;
+			66B5549E135E85190009CF33 /* PBXTextBookmark */ = 66B5549E135E85190009CF33 /* PBXTextBookmark */;
+			66B5549F135E85190009CF33 /* PBXTextBookmark */ = 66B5549F135E85190009CF33 /* PBXTextBookmark */;
+			66B554A0135E85190009CF33 /* PBXTextBookmark */ = 66B554A0135E85190009CF33 /* PBXTextBookmark */;
+			66B554A1135E85190009CF33 /* PBXTextBookmark */ = 66B554A1135E85190009CF33 /* PBXTextBookmark */;
+			66B554A2135E85770009CF33 /* PBXTextBookmark */ = 66B554A2135E85770009CF33 /* PBXTextBookmark */;
+			66B554A3135E85770009CF33 /* PBXTextBookmark */ = 66B554A3135E85770009CF33 /* PBXTextBookmark */;
+			66B554A4135E85A50009CF33 /* PBXTextBookmark */ = 66B554A4135E85A50009CF33 /* PBXTextBookmark */;
+			66B554A5135E85A50009CF33 /* PBXTextBookmark */ = 66B554A5135E85A50009CF33 /* PBXTextBookmark */;
+			66B554AC135E85F70009CF33 /* PBXTextBookmark */ = 66B554AC135E85F70009CF33 /* PBXTextBookmark */;
+			66B554AD135E85F70009CF33 /* PBXTextBookmark */ = 66B554AD135E85F70009CF33 /* PBXTextBookmark */;
+			66B554B0135E861E0009CF33 /* PBXTextBookmark */ = 66B554B0135E861E0009CF33 /* PBXTextBookmark */;
+			66B554B1135E861E0009CF33 /* PBXTextBookmark */ = 66B554B1135E861E0009CF33 /* PBXTextBookmark */;
+			66B554B4135E86650009CF33 /* PBXTextBookmark */ = 66B554B4135E86650009CF33 /* PBXTextBookmark */;
+			66B554B5135E86650009CF33 /* PBXTextBookmark */ = 66B554B5135E86650009CF33 /* PBXTextBookmark */;
+			66B554BA135E871A0009CF33 /* PBXTextBookmark */ = 66B554BA135E871A0009CF33 /* PBXTextBookmark */;
+			66B554BB135E871A0009CF33 /* PBXTextBookmark */ = 66B554BB135E871A0009CF33 /* PBXTextBookmark */;
+			66B554BC135E871A0009CF33 /* PBXTextBookmark */ = 66B554BC135E871A0009CF33 /* PBXTextBookmark */;
+			66B554BD135E871A0009CF33 /* PBXTextBookmark */ = 66B554BD135E871A0009CF33 /* PBXTextBookmark */;
+			66B554C2135E87E80009CF33 /* PBXTextBookmark */ = 66B554C2135E87E80009CF33 /* PBXTextBookmark */;
+			66B554C3135E87E80009CF33 /* PBXTextBookmark */ = 66B554C3135E87E80009CF33 /* PBXTextBookmark */;
+			66B554C8135E88110009CF33 /* PBXTextBookmark */ = 66B554C8135E88110009CF33 /* PBXTextBookmark */;
+			66B554C9135E88110009CF33 /* PBXTextBookmark */ = 66B554C9135E88110009CF33 /* PBXTextBookmark */;
+			66B554CC135E88340009CF33 /* PBXTextBookmark */ = 66B554CC135E88340009CF33 /* PBXTextBookmark */;
+			66B554CD135E88340009CF33 /* PBXTextBookmark */ = 66B554CD135E88340009CF33 /* PBXTextBookmark */;
+			66B554D0135E887D0009CF33 /* PBXTextBookmark */ = 66B554D0135E887D0009CF33 /* PBXTextBookmark */;
+			66B554D1135E887D0009CF33 /* PBXTextBookmark */ = 66B554D1135E887D0009CF33 /* PBXTextBookmark */;
+			66B554D6135E88ED0009CF33 /* PBXTextBookmark */ = 66B554D6135E88ED0009CF33 /* PBXTextBookmark */;
+			66B554D7135E88ED0009CF33 /* PBXTextBookmark */ = 66B554D7135E88ED0009CF33 /* PBXTextBookmark */;
+			66B554DC135E892F0009CF33 /* PBXTextBookmark */ = 66B554DC135E892F0009CF33 /* PBXTextBookmark */;
+			66B554DD135E892F0009CF33 /* PBXTextBookmark */ = 66B554DD135E892F0009CF33 /* PBXTextBookmark */;
 			66D0D6E81338E416009111B6 = 66D0D6E81338E416009111B6 /* PBXTextBookmark */;
 			66DA325F134D6CA400356C53 = 66DA325F134D6CA400356C53 /* PBXTextBookmark */;
 			66DA3260134D6CA400356C53 = 66DA3260134D6CA400356C53 /* PBXTextBookmark */;
@@ -685,7 +715,7 @@
 		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
 		name = "SermonsViewController.h: 35";
 		rLen = 12;
-		rLoc = 1392;
+		rLoc = 1478;
 		rType = 0;
 		vrLen = 1245;
 		vrLoc = 0;
@@ -976,16 +1006,16 @@
 	};
 	667A8881133ACAF200F75A5A /* SermonsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {994, 722}}";
-			sepNavSelRange = "{864, 0}";
-			sepNavVisRange = "{0, 1664}";
+			sepNavIntBoundsRect = "{{0, 0}, {994, 697}}";
+			sepNavSelRange = "{1061, 0}";
+			sepNavVisRange = "{0, 1750}";
 		};
 	};
 	667A8882133ACAF200F75A5A /* SermonsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2343, 5343}}";
-			sepNavSelRange = "{7735, 0}";
-			sepNavVisRange = "{6038, 2449}";
+			sepNavIntBoundsRect = "{{0, 0}, {1342, 5694}}";
+			sepNavSelRange = "{6085, 0}";
+			sepNavVisRange = "{4184, 2334}";
 			sepNavWindowFrame = "{{67, 0}, {1373, 873}}";
 		};
 	};
@@ -1948,7 +1978,7 @@
 		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
 		name = "SermonsViewController.h: 36";
 		rLen = 20;
-		rLoc = 1460;
+		rLoc = 1546;
 		rType = 0;
 		vrLen = 1321;
 		vrLoc = 0;
@@ -1958,7 +1988,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 44";
 		rLen = 0;
-		rLoc = 1325;
+		rLoc = 1386;
 		rType = 0;
 		vrLen = 1466;
 		vrLoc = 60;
@@ -2007,7 +2037,7 @@
 		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
 		name = "SermonsViewController.h: 40";
 		rLen = 24;
-		rLoc = 1540;
+		rLoc = 1626;
 		rType = 0;
 		vrLen = 1524;
 		vrLoc = 0;
@@ -2037,7 +2067,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 46";
 		rLen = 0;
-		rLoc = 1325;
+		rLoc = 1386;
 		rType = 0;
 		vrLen = 1440;
 		vrLoc = 60;
@@ -2047,7 +2077,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 30";
 		rLen = 0;
-		rLoc = 943;
+		rLoc = 974;
 		rType = 0;
 		vrLen = 1488;
 		vrLoc = 60;
@@ -2057,7 +2087,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 30";
 		rLen = 0;
-		rLoc = 943;
+		rLoc = 974;
 		rType = 0;
 		vrLen = 1488;
 		vrLoc = 60;
@@ -2067,7 +2097,7 @@
 		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
 		name = "SermonsViewController.h: 42";
 		rLen = 0;
-		rLoc = 1622;
+		rLoc = 1708;
 		rType = 0;
 		vrLen = 1645;
 		vrLoc = 0;
@@ -2087,7 +2117,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 110";
 		rLen = 0;
-		rLoc = 2932;
+		rLoc = 2993;
 		rType = 0;
 		vrLen = 1756;
 		vrLoc = 2355;
@@ -2167,7 +2197,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 199";
 		rLen = 0;
-		rLoc = 6408;
+		rLoc = 6802;
 		rType = 0;
 		vrLen = 2445;
 		vrLoc = 5196;
@@ -2217,7 +2247,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 51";
 		rLen = 0;
-		rLoc = 1294;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 1685;
 		vrLoc = 604;
@@ -2258,7 +2288,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 341;
+		rLoc = 350;
 		rType = 1;
 	};
 	66B553F6135BE78F0009CF33 /* PBXTextBookmark */ = {
@@ -2266,7 +2296,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 332";
 		rLen = 0;
-		rLoc = 12471;
+		rLoc = 12865;
 		rType = 0;
 		vrLen = 1341;
 		vrLoc = 11341;
@@ -2276,7 +2306,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 264";
 		rLen = 0;
-		rLoc = 9689;
+		rLoc = 10083;
 		rType = 0;
 		vrLen = 2443;
 		vrLoc = 7737;
@@ -2306,7 +2336,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 267";
 		rLen = 0;
-		rLoc = 9739;
+		rLoc = 10133;
 		rType = 0;
 		vrLen = 2439;
 		vrLoc = 7737;
@@ -2336,7 +2366,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 267";
 		rLen = 0;
-		rLoc = 9739;
+		rLoc = 10133;
 		rType = 0;
 		vrLen = 2449;
 		vrLoc = 7737;
@@ -2366,7 +2396,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 267";
 		rLen = 0;
-		rLoc = 9739;
+		rLoc = 10133;
 		rType = 0;
 		vrLen = 2454;
 		vrLoc = 7737;
@@ -2396,7 +2426,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 267";
 		rLen = 0;
-		rLoc = 9739;
+		rLoc = 10133;
 		rType = 0;
 		vrLen = 2456;
 		vrLoc = 7737;
@@ -2426,7 +2456,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 267";
 		rLen = 0;
-		rLoc = 9739;
+		rLoc = 10133;
 		rType = 0;
 		vrLen = 2651;
 		vrLoc = 7249;
@@ -2456,7 +2486,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 267";
 		rLen = 0;
-		rLoc = 9739;
+		rLoc = 10133;
 		rType = 0;
 		vrLen = 2651;
 		vrLoc = 7249;
@@ -2486,7 +2516,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 267";
 		rLen = 0;
-		rLoc = 9739;
+		rLoc = 10133;
 		rType = 0;
 		vrLen = 2712;
 		vrLoc = 7249;
@@ -2516,7 +2546,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 267";
 		rLen = 0;
-		rLoc = 9739;
+		rLoc = 10133;
 		rType = 0;
 		vrLen = 2648;
 		vrLoc = 7249;
@@ -2546,7 +2576,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 222";
 		rLen = 0;
-		rLoc = 7576;
+		rLoc = 7970;
 		rType = 0;
 		vrLen = 2656;
 		vrLoc = 5705;
@@ -2576,7 +2606,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 267";
 		rLen = 0;
-		rLoc = 9739;
+		rLoc = 10133;
 		rType = 0;
 		vrLen = 2506;
 		vrLoc = 7592;
@@ -2606,7 +2636,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 262";
 		rLen = 0;
-		rLoc = 9446;
+		rLoc = 9840;
 		rType = 0;
 		vrLen = 2442;
 		vrLoc = 7656;
@@ -2636,7 +2666,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 263";
 		rLen = 0;
-		rLoc = 9446;
+		rLoc = 9840;
 		rType = 0;
 		vrLen = 2463;
 		vrLoc = 7656;
@@ -2666,7 +2696,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 261";
 		rLen = 0;
-		rLoc = 9406;
+		rLoc = 9800;
 		rType = 0;
 		vrLen = 2461;
 		vrLoc = 7656;
@@ -2696,7 +2726,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 261";
 		rLen = 0;
-		rLoc = 9406;
+		rLoc = 9800;
 		rType = 0;
 		vrLen = 2468;
 		vrLoc = 7656;
@@ -2726,7 +2756,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 261";
 		rLen = 0;
-		rLoc = 9406;
+		rLoc = 9800;
 		rType = 0;
 		vrLen = 2463;
 		vrLoc = 7656;
@@ -2756,7 +2786,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 264";
 		rLen = 0;
-		rLoc = 9406;
+		rLoc = 9800;
 		rType = 0;
 		vrLen = 2472;
 		vrLoc = 7656;
@@ -2786,7 +2816,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 263";
 		rLen = 0;
-		rLoc = 9363;
+		rLoc = 9757;
 		rType = 0;
 		vrLen = 2470;
 		vrLoc = 7656;
@@ -2816,7 +2846,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 265";
 		rLen = 0;
-		rLoc = 9446;
+		rLoc = 9840;
 		rType = 0;
 		vrLen = 2472;
 		vrLoc = 7656;
@@ -2846,7 +2876,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 258";
 		rLen = 1;
-		rLoc = 9175;
+		rLoc = 9569;
 		rType = 0;
 		vrLen = 2519;
 		vrLoc = 7712;
@@ -2876,7 +2906,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 275";
 		rLen = 0;
-		rLoc = 10091;
+		rLoc = 10485;
 		rType = 0;
 		vrLen = 2487;
 		vrLoc = 8331;
@@ -2906,7 +2936,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 76";
 		rLen = 0;
-		rLoc = 2019;
+		rLoc = 2080;
 		rType = 0;
 		vrLen = 1600;
 		vrLoc = 1316;
@@ -2946,7 +2976,7 @@
 		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
 		name = "SermonsViewController.h: 30";
 		rLen = 0;
-		rLoc = 864;
+		rLoc = 884;
 		rType = 0;
 		vrLen = 1664;
 		vrLoc = 0;
@@ -2966,7 +2996,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 146";
 		rLen = 0;
-		rLoc = 4417;
+		rLoc = 4478;
 		rType = 0;
 		vrLen = 1572;
 		vrLoc = 679;
@@ -2976,7 +3006,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 207";
 		rLen = 0;
-		rLoc = 6808;
+		rLoc = 7202;
 		rType = 0;
 		vrLen = 2283;
 		vrLoc = 5712;
@@ -2996,7 +3026,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 207";
 		rLen = 0;
-		rLoc = 6808;
+		rLoc = 7202;
 		rType = 0;
 		vrLen = 2493;
 		vrLoc = 5836;
@@ -3026,7 +3056,7 @@
 		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
 		name = "SermonsViewController.h: 30";
 		rLen = 0;
-		rLoc = 864;
+		rLoc = 884;
 		rType = 0;
 		vrLen = 1664;
 		vrLoc = 0;
@@ -3146,7 +3176,7 @@
 		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
 		name = "SermonsViewController.h: 30";
 		rLen = 0;
-		rLoc = 864;
+		rLoc = 884;
 		rType = 0;
 		vrLen = 1664;
 		vrLoc = 0;
@@ -3156,12 +3186,312 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 226";
 		rLen = 0;
-		rLoc = 7735;
+		rLoc = 8129;
 		rType = 0;
 		vrLen = 2449;
 		vrLoc = 6038;
 	};
 	66B5549B135E84140009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B5549E135E85190009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
+		name = "SermonsViewController.h: 32";
+		rLen = 11;
+		rLoc = 984;
+		rType = 0;
+		vrLen = 1664;
+		vrLoc = 0;
+	};
+	66B5549F135E85190009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 165";
+		rLen = 0;
+		rLoc = 5318;
+		rType = 0;
+		vrLen = 2326;
+		vrLoc = 3785;
+	};
+	66B554A0135E85190009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 164";
+		rLen = 0;
+		rLoc = 5318;
+		rType = 0;
+		vrLen = 1668;
+		vrLoc = 2114;
+	};
+	66B554A1135E85190009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554A2135E85770009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 164";
+		rLen = 0;
+		rLoc = 5318;
+		rType = 0;
+		vrLen = 2139;
+		vrLoc = 4419;
+	};
+	66B554A3135E85770009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554A4135E85A50009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 183";
+		rLen = 0;
+		rLoc = 6136;
+		rType = 0;
+		vrLen = 2223;
+		vrLoc = 4419;
+	};
+	66B554A5135E85A50009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554AC135E85F70009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 182";
+		rLen = 0;
+		rLoc = 6136;
+		rType = 0;
+		vrLen = 2165;
+		vrLoc = 4530;
+	};
+	66B554AD135E85F70009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554B0135E861E0009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 164";
+		rLen = 0;
+		rLoc = 5176;
+		rType = 0;
+		vrLen = 2338;
+		vrLoc = 4349;
+	};
+	66B554B1135E861E0009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554B4135E86650009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 183";
+		rLen = 0;
+		rLoc = 6069;
+		rType = 0;
+		vrLen = 2177;
+		vrLoc = 4964;
+	};
+	66B554B5135E86650009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554BA135E871A0009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
+		name = "SermonsViewController.h: 33";
+		rLen = 0;
+		rLoc = 1061;
+		rType = 0;
+		vrLen = 1750;
+		vrLoc = 0;
+	};
+	66B554BB135E871A0009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 42";
+		rLen = 0;
+		rLoc = 1090;
+		rType = 0;
+		vrLen = 1410;
+		vrLoc = 0;
+	};
+	66B554BC135E871A0009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 199";
+		rLen = 0;
+		rLoc = 6769;
+		rType = 0;
+		vrLen = 2122;
+		vrLoc = 5149;
+	};
+	66B554BD135E871A0009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554C2135E87E80009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 206";
+		rLen = 0;
+		rLoc = 6673;
+		rType = 0;
+		vrLen = 2321;
+		vrLoc = 6131;
+	};
+	66B554C3135E87E80009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554C8135E88110009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 208";
+		rLen = 0;
+		rLoc = 6678;
+		rType = 0;
+		vrLen = 2252;
+		vrLoc = 6418;
+	};
+	66B554C9135E88110009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554CC135E88340009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 204";
+		rLen = 0;
+		rLoc = 6673;
+		rType = 0;
+		vrLen = 2361;
+		vrLoc = 6133;
+	};
+	66B554CD135E88340009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554D0135E887D0009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 203";
+		rLen = 0;
+		rLoc = 6673;
+		rType = 0;
+		vrLen = 2331;
+		vrLoc = 6280;
+	};
+	66B554D1135E887D0009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554D6135E88ED0009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 236";
+		rLen = 0;
+		rLoc = 8136;
+		rType = 0;
+		vrLen = 2326;
+		vrLoc = 6665;
+	};
+	66B554D7135E88ED0009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 174";
+		rLen = 0;
+		rLoc = 5901;
+		rType = 0;
+		vrLen = 2359;
+		vrLoc = 3065;
+	};
+	66B554DC135E892F0009CF33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 187";
+		rLen = 0;
+		rLoc = 6085;
+		rType = 0;
+		vrLen = 2334;
+		vrLoc = 4184;
+	};
+	66B554DD135E892F0009CF33 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 174";
@@ -3263,7 +3593,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 164";
 		rLen = 0;
-		rLoc = 5407;
+		rLoc = 5582;
 		rType = 0;
 		vrLen = 1567;
 		vrLoc = 0;

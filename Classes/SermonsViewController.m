@@ -32,12 +32,14 @@
 @synthesize fetchedResultsController=fetchedResultsController_;
 @synthesize managedObjectContext=managedObjectContext_;
 @synthesize podcastLastUpdated;
+@synthesize currentDateString;
 
 
 - (void)dealloc {
 	[item release];
 	[currentTitle release];
 	[currentDate release];
+	[currentDateString release];
 	[currentAuthor release];
 	[currentLink release];
     [responseData release];
@@ -161,7 +163,9 @@
         self.item = [[NSMutableDictionary alloc] init];  
         self.currentTitle = [[NSMutableString alloc] init];  
         self.currentAuthor = [[NSMutableString alloc] init]; 
-		self.currentSummary = [[NSMutableString alloc] init];
+        self.currentSummary = [[NSMutableString alloc] init]; 
+		//self.currentDateString = [[NSMutableString alloc] init];
+		//self.currentDate = [[NSDate alloc] init];
     }  
 	
     // podcast url is an attribute of the element enclosure  
@@ -179,6 +183,8 @@
         [self.currentAuthor appendString:string];  
     } else if ([currentElement isEqualToString:@"itunes:summary"]) {  
         [self.currentSummary appendString:string];  
+    } else if ([currentElement isEqualToString:@"pubDate"]) {  
+        //[self.currentDateString appendString:string];
     }
 }
 
@@ -191,6 +197,9 @@
 		[self.item setObject:self.currentSummary forKey:@"summary"];
 		[currentSummary release]; 
 		[self.item setObject:self.currentLink forKey:@"feedLink"];
+		
+		//[self.item setObject:self.currentDate forKey:@"publishedOn"];
+		[self.currentDate release];
 		[self.item setObject:@"podcast" forKey:@"feedType"]; 
 		[self.item setObject:@"" forKey:@"content"];
 		[currentLink release];
