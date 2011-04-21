@@ -58,7 +58,7 @@
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.sgucandcs.org"]];
 	}
 	if ([buttonText isEqualToString:@"Call Us"]) {
-		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://526-287-0486"]];
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://626-287-0486"]];
 	}
 	if ([buttonText isEqualToString:@"Directions"]) {
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://maps.google.com/maps?q=117+N.+Pine+St.+San+Gabriel,+Ca+91775"]];
@@ -67,6 +67,7 @@
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:ghoover@sgucandcs.org"]];
 	}
 	[actionSheet dismissWithClickedButtonIndex:buttonIndex animated:YES];
+	[buttonText release];
 }
 
 #pragma mark -

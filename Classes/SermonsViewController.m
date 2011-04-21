@@ -58,7 +58,7 @@
 - (NSDate *) podcastLastUpdated{
 	if (podcastLastUpdated == nil)
     {
-        self.podcastLastUpdated = [[NSUserDefaults standardUserDefaults] objectForKey:@"PodcastLastUpdated"];
+        self.podcastLastUpdated = [[NSUserDefaults standardUserDefaults] objectForKey:@"SermonLastUpdated"];
     }
     return podcastLastUpdated;	
 }
@@ -212,7 +212,7 @@
 	self.title = @"SGUC Sermons";
 	//Set it to today
 	NSDate *myDate = [NSDate date];
-	[[NSUserDefaults standardUserDefaults] setObject:myDate forKey:@"PodcastLastUpdated"];
+	[[NSUserDefaults standardUserDefaults] setObject:myDate forKey:@"SermonLastUpdated"];
 	self.podcastLastUpdated = myDate;
 	[self updateTextForPullToUpdate];
 	self.tableView.userInteractionEnabled = YES;
@@ -267,7 +267,7 @@
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20]; 
+    [fetchRequest setFetchBatchSize:20];
 	
 	//Limit to only Podcast results
 	NSString *attributeName = @"feedType";
