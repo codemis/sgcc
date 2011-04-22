@@ -29,7 +29,7 @@
 	[dateFormatter setDateStyle:NSDateFormatterMediumStyle];
 	self.title = [dateFormatter stringFromDate:self.item.publishedOn];
 	[dateFormatter release];
-	NSString *html = [NSString stringWithFormat:@"<h2 style='text-align: center;padding:5px 0px 10px;'>%@</h2><div style='text-align: left;font-size: 16px;'>%@</div><div style='font-size: 9px; padding-top: 15px;'></div>", self.item.title, self.item.content]; 
+	NSString *html = [NSString stringWithFormat:@"<h2 style='text-align: center;padding:5px 0px 10px;'>%@</h2><p style='text-align: left;font-size: 20px;line-height: 30px;'>%@</p><div style='font-size: 9px; padding-top: 15px;'></div>", self.item.title, self.item.content]; 
 	[self.myWebView loadHTMLString:html baseURL:[NSURL URLWithString:@"http://www.sgucandcs.org"]];
 }
 
