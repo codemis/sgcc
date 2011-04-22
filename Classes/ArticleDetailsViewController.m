@@ -21,12 +21,22 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	//http://blog.costan.us/2009/01/auto-rotating-tab-bars-on-iphone.html
+	self.view.autoresizesSubviews = YES;
+	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateStyle:NSDateFormatterMediumStyle];
 	self.title = [dateFormatter stringFromDate:self.item.publishedOn];
 	[dateFormatter release];
 	NSString *html = [NSString stringWithFormat:@"<h2 style='text-align: center;padding:5px 0px 10px;'>%@</h2><div style='text-align: left;font-size: 16px;'>%@</div><div style='font-size: 9px; padding-top: 15px;'></div>", self.item.title, self.item.content]; 
 	[self.myWebView loadHTMLString:html baseURL:[NSURL URLWithString:@"http://www.sgucandcs.org"]];
+}
+
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations.
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -20,6 +20,14 @@
     [super dealloc];
 }
 
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	//http://blog.costan.us/2009/01/auto-rotating-tab-bars-on-iphone.html
+	self.view.autoresizesSubviews = YES;
+	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+}
+
 - (IBAction) openContactView {
 	UIActionSheet *contactActionSheet = [[UIActionSheet alloc] initWithTitle:@"Contact Us" 
 																	delegate:self 
@@ -68,6 +76,12 @@
 	}
 	[actionSheet dismissWithClickedButtonIndex:buttonIndex animated:YES];
 	[buttonText release];
+}
+
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations.
+    return YES;
 }
 
 #pragma mark -

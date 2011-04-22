@@ -34,6 +34,10 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	//http://blog.costan.us/2009/01/auto-rotating-tab-bars-on-iphone.html
+	self.view.autoresizesSubviews = YES;
+	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	
 	self.webView.delegate = self;
 	// Refresh button
 	self.navBar.topItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
@@ -48,6 +52,11 @@
 	[self updatePage];
 }
 
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations.
+    return YES;
+}
 
 #pragma mark -
 #pragma mark Handle Web View Delegate

@@ -26,7 +26,8 @@
 }
 
 - (void) updatePage {
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.matthiasmedia.com.au/2wtl/"]]];
+	self.webView.scalesPageToFit = YES;
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.matthiasmedia.com.au/2wtl/2wtlonline.html"]]];
 	
 }
 
@@ -67,6 +68,12 @@
 #pragma mark -
 #pragma mark Respond to ModalViewControllerDelegate
 -(void) modalViewReadyToDismiss{
+}
+
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations.
+    return YES;
 }
 
 #pragma mark Handle Web View Delegate

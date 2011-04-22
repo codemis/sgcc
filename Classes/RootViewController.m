@@ -52,6 +52,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	//http://blog.costan.us/2009/01/auto-rotating-tab-bars-on-iphone.html
+	self.view.autoresizesSubviews = YES;
+	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	
 	[self updateTextForPullToUpdate];
 	// Setup
@@ -364,6 +367,12 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView endUpdates];
+}
+
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations.
+    return YES;
 }
 
 

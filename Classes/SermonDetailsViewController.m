@@ -85,6 +85,10 @@ typedef enum { SectionDetailAction } DetailRows;
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
+	//http://blog.costan.us/2009/01/auto-rotating-tab-bars-on-iphone.html
+	self.view.autoresizesSubviews = YES;
+	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	
 	UIWebView *webView = [[UIWebView alloc] initWithFrame: CGRectMake(0.0, 0.0, 1.0, 1.0)];  
 	webView.delegate = self;  
 	self.playerView = webView;  
@@ -140,6 +144,11 @@ typedef enum { SectionDetailAction } DetailRows;
 	}
 }
 
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations.
+    return YES;
+}
 
 #pragma mark -
 #pragma mark Memory management
