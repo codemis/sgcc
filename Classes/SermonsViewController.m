@@ -9,6 +9,7 @@
 #import "SermonsViewController.h"
 #import "SermonDetailsViewController.h"
 #import "Feed.h"
+#import "NSString+HTML.h"
 
 @interface SermonsViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -164,31 +165,31 @@
     self.currentElement = [[elementName copy] autorelease];  
 
     if ([elementName isEqualToString:@"item"]) {  
-        self.item = [[NSMutableDictionary alloc] init];  
-        self.currentTitle = [[NSMutableString alloc] init];  
+        self.item = [[NSMutableDictionary alloc] init]; 
+        self.currentTitle = [[NSMutableString alloc] init];   
         self.currentAuthor = [[NSMutableString alloc] init]; 
         self.currentSummary = [[NSMutableString alloc] init]; 
-		//self.currentDateString = [[NSMutableString alloc] init];
-		//self.currentDate = [[NSDate alloc] init];
+		self.currentDateString = [[NSMutableString alloc] init];
     }  
 	
     // podcast url is an attribute of the element enclosure  
     if ([currentElement isEqualToString:@"enclosure"]) { 
 		self.currentLink = [[NSMutableString alloc] init];
-		[self.currentLink appendString:[attributeDict objectForKey:@"url"]];
+		[self.currentLink appendString:[[attributeDict objectForKey:@"url"] stringByRemovingNewLinesAndWhitespace]];
     } 
 
 }
 
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{  
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{ 
+	NSMutableString *content = [NSMutableString stringWithString:string];
     if ([currentElement isEqualToString:@"title"]) {  
-        [self.currentTitle appendString:string];  
-    } else if ([currentElement isEqualToString:@"itunes:author"]) {  
-        [self.currentAuthor appendString:string];  
-    } else if ([currentElement isEqualToString:@"itunes:summary"]) {  
-        [self.currentSummary appendString:string];  
+		[self.currentTitle appendString:[content stringByRemovingNewLinesAndWhitespace]];
+    } else if ([currentElement isEqualToString:@"itunes:author"]) {   
+		[self.currentAuthor appendString:[content stringByRemovingNewLinesAndWhitespace]];
+    } else if ([currentElement isEqualToString:@"itunes:summary"]) {   
+		[self.currentSummary appendString:[content stringByRemovingNewLinesAndWhitespace]];
     } else if ([currentElement isEqualToString:@"pubDate"]) {  
-        //[self.currentDateString appendString:string];
+		[self.currentDateString appendString:[content stringByRemovingNewLinesAndWhitespace]];
     }
 }
 
@@ -201,12 +202,15 @@
 		[self.item setObject:self.currentSummary forKey:@"summary"];
 		[currentSummary release]; 
 		[self.item setObject:self.currentLink forKey:@"feedLink"];
-		
-		//[self.item setObject:self.currentDate forKey:@"publishedOn"];
-		[self.currentDate release];
+		[currentLink release];
+		NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+		[dateFormat setDateFormat:@"EEE, d MMM yyyy HH:mm:ss Z"];
+		self.currentDate = [dateFormat dateFromString:self.currentDateString];
+		[dateFormat release];
+		[self.item setObject:self.currentDate forKey:@"publishedOn"];
+		[currentDateString release];
 		[self.item setObject:@"podcast" forKey:@"feedType"]; 
 		[self.item setObject:@"" forKey:@"content"];
-		[currentLink release];
 		[self insertNewObject:self.item];
 		[item release];
     }  

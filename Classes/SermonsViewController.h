@@ -16,8 +16,8 @@
 	UIActivityIndicatorView *activityIndicator;
 	
     NSMutableDictionary *item;  
-    NSString *currentElement;  
-    NSMutableString *currentTitle, *currentAuthor, *currentLink, *currentSummary, *currentDateString;
+    NSString *currentElement; 
+	NSMutableString *currentTitle, *currentAuthor, *currentLink, *currentSummary, *currentDateString;
 	NSDate *currentDate;
 	NSDate *podcastLastUpdated;
 	
