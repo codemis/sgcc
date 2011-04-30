@@ -13,6 +13,7 @@
 @interface SermonDetailsViewController : UITableViewController{
 	Feed *sermon;
 	AVPlayer *avPlayer;
+	BOOL sermonPlaying;
 }
 
 @property (nonatomic, retain) Feed *sermon;

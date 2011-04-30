@@ -24,10 +24,16 @@ typedef enum { SectionDetailAction } DetailRows;
     [super dealloc];
 }
 
-- (void) playSermon{
+- (void) processSermonPress{
 	if (self.sermon.feedLink) {
-		self.avPlayer = [AVPlayer playerWithURL:[NSURL URLWithString: self.sermon.feedLink]];
-		[self.avPlayer play];
+		if (sermonPlaying == NO) {
+			[self.avPlayer play];
+			[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+			sermonPlaying = YES;
+		}else {
+			[self.avPlayer pause];
+			sermonPlaying = NO;
+		}
 	}else { 
 		UIAlertView * errorAlert = [[UIAlertView alloc] initWithTitle:@"Error loading sermon" message:@"Unable to find the sermon file." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];  
 		[errorAlert show];
@@ -88,6 +94,11 @@ typedef enum { SectionDetailAction } DetailRows;
 	self.view.autoresizesSubviews = YES;
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	
+	if (self.sermon.feedLink) {
+		self.avPlayer = [AVPlayer playerWithURL:[NSURL URLWithString: self.sermon.feedLink]];
+	}
+
+	sermonPlaying = NO;
     [super viewDidLoad];
 
 }
@@ -134,8 +145,17 @@ typedef enum { SectionDetailAction } DetailRows;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if(indexPath.section == SectionDetail) {
-		[self playSermon];
+		[self processSermonPress];
+		UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+		if (sermonPlaying == NO) {
+			cell.textLabel.text = @"Play Sermon";
+		}else {
+			cell.textLabel.text = @"Pause";
+		}
 	}
+	
+	// Deselect
+	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 // Override to allow orientations other than the default portrait orientation.

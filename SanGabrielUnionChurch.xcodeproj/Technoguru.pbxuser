@@ -2,7 +2,7 @@
 {
 	1D3623240D0F684500981E51 /* SanGabrielUnionChurchAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1112, 697}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1039, 720}}";
 			sepNavSelRange = "{921, 9}";
 			sepNavVisRange = "{0, 1270}";
 		};
@@ -181,16 +181,16 @@
 	};
 	28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {994, 697}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1039, 720}}";
 			sepNavSelRange = "{539, 14}";
 			sepNavVisRange = "{0, 1121}";
 		};
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 5460}}";
-			sepNavSelRange = "{2458, 29}";
-			sepNavVisRange = "{1330, 1837}";
+			sepNavIntBoundsRect = "{{0, 0}, {2343, 5174}}";
+			sepNavSelRange = "{9189, 0}";
+			sepNavVisRange = "{7627, 1842}";
 			sepNavWindowFrame = "{{56, 0}, {1373, 873}}";
 		};
 	};
@@ -270,6 +270,8 @@
 			6612A30F136C8A4700953754 /* PBXTextBookmark */ = 6612A30F136C8A4700953754 /* PBXTextBookmark */;
 			6612A310136C8A4700953754 /* PBXTextBookmark */ = 6612A310136C8A4700953754 /* PBXTextBookmark */;
 			6612A311136C8A4700953754 /* PBXTextBookmark */ = 6612A311136C8A4700953754 /* PBXTextBookmark */;
+			6612A35A136CBF8A00953754 /* XCBuildMessageTextBookmark */ = 6612A35A136CBF8A00953754 /* XCBuildMessageTextBookmark */;
+			6612A35B136CBF8A00953754 /* PBXTextBookmark */ = 6612A35B136CBF8A00953754 /* PBXTextBookmark */;
 			66203A36134F64DF00C22ACF = 66203A36134F64DF00C22ACF /* PBXTextBookmark */;
 			66203A39134F64DF00C22ACF = 66203A39134F64DF00C22ACF /* PBXTextBookmark */;
 			66203A3B134F64DF00C22ACF = 66203A3B134F64DF00C22ACF /* PBXTextBookmark */;
@@ -472,6 +474,25 @@
 		vrLen = 2520;
 		vrLoc = 5557;
 	};
+	6612A35A136CBF8A00953754 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Property 'sermonPlaying' with 'retain' attribute must be of object type";
+		fRef = 667A8982133B014700F75A5A /* SermonDetailsViewController.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 21;
+		rType = 1;
+	};
+	6612A35B136CBF8A00953754 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8982133B014700F75A5A /* SermonDetailsViewController.h */;
+		name = "SermonDetailsViewController.h: 23";
+		rLen = 0;
+		rLoc = 458;
+		rType = 0;
+		vrLen = 513;
+		vrLoc = 0;
+	};
 	662039A9134EB05900C22ACF /* PullRefreshTableViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1348, 869}}";
@@ -634,7 +655,7 @@
 		fRef = 667A8983133B014700F75A5A /* SermonDetailsViewController.m */;
 		name = "SermonDetailsViewController.m: 91";
 		rLen = 0;
-		rLoc = 2500;
+		rLoc = 2543;
 		rType = 0;
 		vrLen = 1829;
 		vrLoc = 347;
@@ -708,7 +729,7 @@
 	};
 	664B22E8133E3F0E005676EA /* AboutUsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1230, 894}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1039, 720}}";
 			sepNavSelRange = "{383, 0}";
 			sepNavVisRange = "{0, 511}";
 		};
@@ -922,14 +943,14 @@
 	};
 	667A8881133ACAF200F75A5A /* SermonsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1039, 697}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1039, 720}}";
 			sepNavSelRange = "{1226, 0}";
 			sepNavVisRange = "{0, 1746}";
 		};
 	};
 	667A8882133ACAF200F75A5A /* SermonsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1342, 5772}}";
+			sepNavIntBoundsRect = "{{0, 0}, {2343, 5811}}";
 			sepNavSelRange = "{7410, 0}";
 			sepNavVisRange = "{5505, 2503}";
 			sepNavWindowFrame = "{{67, 0}, {1373, 873}}";
@@ -938,15 +959,15 @@
 	667A8982133B014700F75A5A /* SermonDetailsViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1039, 720}}";
-			sepNavSelRange = "{513, 11}";
-			sepNavVisRange = "{0, 532}";
+			sepNavSelRange = "{456, 0}";
+			sepNavVisRange = "{0, 463}";
 		};
 	};
 	667A8983133B014700F75A5A /* SermonDetailsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1412, 2171}}";
-			sepNavSelRange = "{596, 0}";
-			sepNavVisRange = "{37, 1704}";
+			sepNavIntBoundsRect = "{{0, 0}, {1412, 2353}}";
+			sepNavSelRange = "{4114, 0}";
+			sepNavVisRange = "{3059, 1653}";
 			sepNavWindowFrame = "{{15, 0}, {1373, 873}}";
 		};
 	};
@@ -1015,7 +1036,7 @@
 	};
 	667B00D11339AE6D00790320 /* EventsWebViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1087, 722}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1039, 720}}";
 			sepNavSelRange = "{128, 0}";
 			sepNavVisRange = "{0, 506}";
 		};
@@ -1124,7 +1145,7 @@
 		fRef = 667A8982133B014700F75A5A /* SermonDetailsViewController.h */;
 		name = "SermonDetailsViewController.h: 13";
 		rLen = 0;
-		rLoc = 338;
+		rLoc = 396;
 		rType = 0;
 		vrLen = 408;
 		vrLoc = 0;
@@ -1213,7 +1234,7 @@
 	};
 	66D0D6CA13385CC6009111B6 /* ArticleDetailsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1230, 894}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1039, 720}}";
 			sepNavSelRange = "{263, 11}";
 			sepNavVisRange = "{0, 385}";
 		};
