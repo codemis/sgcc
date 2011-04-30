@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "Feed.h"
 
-@interface SermonDetailsViewController : UITableViewController <UIWebViewDelegate> {
+@interface SermonDetailsViewController : UITableViewController{
 	Feed *sermon;
-
+	AVPlayer *avPlayer;
 }
 
 @property (nonatomic, retain) Feed *sermon;
-@property (nonatomic, retain) UIWebView *playerView;
+@property (nonatomic, retain) AVPlayer *avPlayer;
 
 @end

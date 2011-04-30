@@ -634,7 +634,7 @@
 		fRef = 667A8983133B014700F75A5A /* SermonDetailsViewController.m */;
 		name = "SermonDetailsViewController.m: 91";
 		rLen = 0;
-		rLoc = 2451;
+		rLoc = 2500;
 		rType = 0;
 		vrLen = 1829;
 		vrLoc = 347;
@@ -929,24 +929,24 @@
 	};
 	667A8882133ACAF200F75A5A /* SermonsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1342, 5707}}";
-			sepNavSelRange = "{7169, 0}";
-			sepNavVisRange = "{5679, 2401}";
+			sepNavIntBoundsRect = "{{0, 0}, {1342, 5772}}";
+			sepNavSelRange = "{7410, 0}";
+			sepNavVisRange = "{5505, 2503}";
 			sepNavWindowFrame = "{{67, 0}, {1373, 873}}";
 		};
 	};
 	667A8982133B014700F75A5A /* SermonDetailsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {994, 487}}";
-			sepNavSelRange = "{300, 0}";
-			sepNavVisRange = "{0, 408}";
+			sepNavIntBoundsRect = "{{0, 0}, {1039, 720}}";
+			sepNavSelRange = "{513, 11}";
+			sepNavVisRange = "{0, 532}";
 		};
 	};
 	667A8983133B014700F75A5A /* SermonDetailsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1412, 2210}}";
-			sepNavSelRange = "{2451, 0}";
-			sepNavVisRange = "{347, 1829}";
+			sepNavIntBoundsRect = "{{0, 0}, {1412, 2171}}";
+			sepNavSelRange = "{596, 0}";
+			sepNavVisRange = "{37, 1704}";
 			sepNavWindowFrame = "{{15, 0}, {1373, 873}}";
 		};
 	};
@@ -1124,7 +1124,7 @@
 		fRef = 667A8982133B014700F75A5A /* SermonDetailsViewController.h */;
 		name = "SermonDetailsViewController.h: 13";
 		rLen = 0;
-		rLoc = 300;
+		rLoc = 338;
 		rType = 0;
 		vrLen = 408;
 		vrLoc = 0;

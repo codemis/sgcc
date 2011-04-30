@@ -15,20 +15,19 @@ typedef enum { SectionDetailAction } DetailRows;
 @implementation SermonDetailsViewController
 
 @synthesize sermon;
-@synthesize playerView;
+@synthesize avPlayer;
 
 
 - (void)dealloc {
 	[sermon release];
-	[playerView release];
+	[avPlayer release];
     [super dealloc];
 }
 
 - (void) playSermon{
 	if (self.sermon.feedLink) {
-		NSURLRequest *request = [[NSURLRequest alloc] initWithURL: [NSURL URLWithString: self.sermon.feedLink] cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 15.0];  
-		[self.playerView loadRequest: request];  
-		[request release]; 
+		self.avPlayer = [AVPlayer playerWithURL:[NSURL URLWithString: self.sermon.feedLink]];
+		[self.avPlayer play];
 	}else { 
 		UIAlertView * errorAlert = [[UIAlertView alloc] initWithTitle:@"Error loading sermon" message:@"Unable to find the sermon file." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];  
 		[errorAlert show];
@@ -88,11 +87,6 @@ typedef enum { SectionDetailAction } DetailRows;
 	//http://blog.costan.us/2009/01/auto-rotating-tab-bars-on-iphone.html
 	self.view.autoresizesSubviews = YES;
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	
-	UIWebView *webView = [[UIWebView alloc] initWithFrame: CGRectMake(0.0, 0.0, 1.0, 1.0)];  
-	webView.delegate = self;  
-	self.playerView = webView;  
-	[webView release]; 
 	
     [super viewDidLoad];
 
