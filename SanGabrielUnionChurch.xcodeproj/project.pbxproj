@@ -18,13 +18,15 @@
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28D3F202112F7DC200FD0661 /* SanGabrielUnionChurch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* SanGabrielUnionChurch.xcdatamodeld */; };
 		6612A33A136C915000953754 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6612A339136C915000953754 /* AVFoundation.framework */; };
+		661D9FF1137399AF00ED3886 /* landing.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D9FEF137399AF00ED3886 /* landing.png */; };
+		661D9FF2137399AF00ED3886 /* landing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D9FF0137399AF00ED3886 /* landing@2x.png */; };
+		661D9FF713739AD800ED3886 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D9FF513739AD800ED3886 /* logo.png */; };
+		661D9FF813739AD800ED3886 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D9FF613739AD800ED3886 /* logo@2x.png */; };
 		662039AB134EB05900C22ACF /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662039AA134EB05900C22ACF /* PullRefreshTableViewController.m */; };
 		662039AD134EB07D00C22ACF /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 662039AC134EB07D00C22ACF /* arrow.png */; };
 		662039B7134EB0C300C22ACF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662039B6134EB0C300C22ACF /* QuartzCore.framework */; };
 		6620DA53133D9501004FE72B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6620DA51133D9501004FE72B /* Icon.png */; };
 		6620DA54133D9501004FE72B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6620DA52133D9501004FE72B /* Icon@2x.png */; };
-		6620DA7D133D9C59004FE72B /* landing.png in Resources */ = {isa = PBXBuildFile; fileRef = 6620DA7B133D9C59004FE72B /* landing.png */; };
-		6620DA7E133D9C59004FE72B /* landing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6620DA7C133D9C59004FE72B /* landing@2x.png */; };
 		6620DA80133D9C9A004FE72B /* AboutUsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6620DA7F133D9C9A004FE72B /* AboutUsView.xib */; };
 		6620DA84133DA453004FE72B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 6620DA82133DA453004FE72B /* button.png */; };
 		6620DA85133DA453004FE72B /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6620DA83133DA453004FE72B /* button@2x.png */; };
@@ -79,14 +81,16 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6612A339136C915000953754 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		661D9FEF137399AF00ED3886 /* landing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landing.png; sourceTree = "<group>"; };
+		661D9FF0137399AF00ED3886 /* landing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "landing@2x.png"; sourceTree = "<group>"; };
+		661D9FF513739AD800ED3886 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		661D9FF613739AD800ED3886 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		662039A9134EB05900C22ACF /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
 		662039AA134EB05900C22ACF /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		662039AC134EB07D00C22ACF /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		662039B6134EB0C300C22ACF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6620DA51133D9501004FE72B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		6620DA52133D9501004FE72B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		6620DA7B133D9C59004FE72B /* landing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landing.png; sourceTree = "<group>"; };
-		6620DA7C133D9C59004FE72B /* landing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "landing@2x.png"; sourceTree = "<group>"; };
 		6620DA7F133D9C9A004FE72B /* AboutUsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsView.xib; sourceTree = "<group>"; };
 		6620DA82133DA453004FE72B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		6620DA83133DA453004FE72B /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
@@ -225,6 +229,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				661D9FF513739AD800ED3886 /* logo.png */,
+				661D9FF613739AD800ED3886 /* logo@2x.png */,
+				661D9FEF137399AF00ED3886 /* landing.png */,
+				661D9FF0137399AF00ED3886 /* landing@2x.png */,
 				662C21811361304D00FEADBC /* Default.png */,
 				662C21821361304D00FEADBC /* Default@2x.png */,
 				28D3F201112F7DC200FD0661 /* SanGabrielUnionChurch.xcdatamodeld */,
@@ -239,8 +247,6 @@
 				664B2323133EBDEA005676EA /* sermons@2x.png */,
 				6620DA82133DA453004FE72B /* button.png */,
 				6620DA83133DA453004FE72B /* button@2x.png */,
-				6620DA7B133D9C59004FE72B /* landing.png */,
-				6620DA7C133D9C59004FE72B /* landing@2x.png */,
 				6620DA51133D9501004FE72B /* Icon.png */,
 				6620DA52133D9501004FE72B /* Icon@2x.png */,
 				8D1107310486CEB800E47090 /* SanGabrielUnionChurch-Info.plist */,
@@ -398,8 +404,6 @@
 				667A88BF133AD1F300F75A5A /* SermonsView.xib in Resources */,
 				6620DA53133D9501004FE72B /* Icon.png in Resources */,
 				6620DA54133D9501004FE72B /* Icon@2x.png in Resources */,
-				6620DA7D133D9C59004FE72B /* landing.png in Resources */,
-				6620DA7E133D9C59004FE72B /* landing@2x.png in Resources */,
 				6620DA80133D9C9A004FE72B /* AboutUsView.xib in Resources */,
 				6620DA84133DA453004FE72B /* button.png in Resources */,
 				6620DA85133DA453004FE72B /* button@2x.png in Resources */,
@@ -419,6 +423,10 @@
 				66B55381135A9B090009CF33 /* ArticleDetailsView.xib in Resources */,
 				662C21831361304D00FEADBC /* Default.png in Resources */,
 				662C21841361304D00FEADBC /* Default@2x.png in Resources */,
+				661D9FF1137399AF00ED3886 /* landing.png in Resources */,
+				661D9FF2137399AF00ED3886 /* landing@2x.png in Resources */,
+				661D9FF713739AD800ED3886 /* logo.png in Resources */,
+				661D9FF813739AD800ED3886 /* logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
