@@ -13,11 +13,34 @@
 
 @implementation AboutUsViewController
 
-@synthesize tabbar;
+@synthesize tabbar, aboutUsButton, beliefButton, jesusButton, contactButton;
 
 - (void)dealloc {
 	[tabbar release];
+	[aboutUsButton release];
+	[beliefButton release];
+	[jesusButton release];
+	[contactButton release];
     [super dealloc];
+}
+
+//custom method for handling view rotation
+- (void)rotateViewWithOrientation:(UIInterfaceOrientation) currentOrientation{
+	if (currentOrientation == UIInterfaceOrientationLandscapeLeft ||
+		currentOrientation == UIInterfaceOrientationLandscapeRight)
+	{
+		self.aboutUsButton.frame = CGRectMake(30, 137, 210, 37);
+		self.beliefButton.frame = CGRectMake(250, 137, 210, 37);
+		self.jesusButton.frame = CGRectMake(30, 182, 210, 37);
+		self.contactButton.frame = CGRectMake(250, 182, 210, 37);
+	}
+	else
+	{
+		self.aboutUsButton.frame = CGRectMake(20, 155, 280, 37);
+		self.beliefButton.frame = CGRectMake(20, 205, 280, 37);
+		self.jesusButton.frame = CGRectMake(20, 255, 280, 37);
+		self.contactButton.frame = CGRectMake(20, 305, 280, 37);	
+	}
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -26,6 +49,11 @@
 	//http://blog.costan.us/2009/01/auto-rotating-tab-bars-on-iphone.html
 	self.view.autoresizesSubviews = YES;
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self rotateViewWithOrientation:[[UIDevice currentDevice] orientation]];
 }
 
 - (IBAction) openContactView {
@@ -83,6 +111,11 @@
     // Return YES for supported orientations.
     return YES;
 }
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+	[self rotateViewWithOrientation:toInterfaceOrientation];
+}
+	
 
 #pragma mark -
 #pragma mark Respond to ModalViewControllerDelegate

@@ -111,7 +111,7 @@
 		self.tableView.userInteractionEnabled = NO;
 		self.tableView.alpha = 0.3;  		
 	}else {
-		self.title = @"SGUC Sermons";
+		self.title = @"Sermons";
 	}
 }
 
@@ -217,7 +217,7 @@
 }  
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-	self.title = @"SGUC Sermons";
+	self.title = @"Sermons";
 	//Set it to today
 	NSDate *myDate = [NSDate date];
 	[[NSUserDefaults standardUserDefaults] setObject:myDate forKey:@"SermonLastUpdated"];

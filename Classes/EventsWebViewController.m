@@ -61,7 +61,7 @@
 #pragma mark -
 #pragma mark Handle Web View Delegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-	self.navBar.topItem.title = @"SGUC Events";
+	self.navBar.topItem.title = @"Events";
 	[self.activityIndicator stopAnimating];
 }
 

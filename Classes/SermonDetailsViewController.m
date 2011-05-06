@@ -90,6 +90,7 @@ typedef enum { SectionDetailAction } DetailRows;
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
+	[super viewDidLoad];
 	//http://blog.costan.us/2009/01/auto-rotating-tab-bars-on-iphone.html
 	self.view.autoresizesSubviews = YES;
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -99,8 +100,7 @@ typedef enum { SectionDetailAction } DetailRows;
 	}
 
 	sermonPlaying = NO;
-    [super viewDidLoad];
-
+	self.title = self.sermon.title;
 }
 
 #pragma mark -

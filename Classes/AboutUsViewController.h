@@ -13,6 +13,10 @@
 @interface AboutUsViewController : UIViewController <UIActionSheetDelegate, ModalViewControllerDelegate> {}
 
 @property(nonatomic, retain) IBOutlet UITabBar* tabbar;
+@property(nonatomic, retain) IBOutlet UIButton* aboutUsButton;
+@property(nonatomic, retain) IBOutlet UIButton* beliefButton;
+@property(nonatomic, retain) IBOutlet UIButton* jesusButton;
+@property(nonatomic, retain) IBOutlet UIButton* contactButton;
 - (IBAction) openContactView;
 - (IBAction) openTwoWaysView;
 - (IBAction) openWhoWeAreView;
