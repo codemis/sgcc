@@ -72,7 +72,7 @@
 		self.tableView.alpha = 0.3;
 		[self parseArticles];
 	}else {
-		self.title = @"Pastor's Blog";
+		self.title = @"Blog";
 	}
 
 }
@@ -93,7 +93,7 @@
 	feedParser.feedParseType = ParseTypeFull; // Parse feed info and all items
 	feedParser.connectionType = ConnectionTypeAsynchronously;
 	[feedParser parse];
-	self.title = @"Pastor's Blog";
+	self.title = @"Blog";
 }
 
 -(void) updateTextForPullToUpdate{

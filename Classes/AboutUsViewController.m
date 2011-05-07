@@ -29,9 +29,9 @@
 	if (currentOrientation == UIInterfaceOrientationLandscapeLeft ||
 		currentOrientation == UIInterfaceOrientationLandscapeRight)
 	{
-		self.aboutUsButton.frame = CGRectMake(30, 137, 210, 37);
+		self.aboutUsButton.frame = CGRectMake(20, 137, 210, 37);
 		self.beliefButton.frame = CGRectMake(250, 137, 210, 37);
-		self.jesusButton.frame = CGRectMake(30, 182, 210, 37);
+		self.jesusButton.frame = CGRectMake(20, 182, 210, 37);
 		self.contactButton.frame = CGRectMake(250, 182, 210, 37);
 	}
 	else
