@@ -14,8 +14,11 @@
 @interface SermonsViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (void)insertNewObject:(NSMutableDictionary *) itemToSave;
--(void) initializeRssFeed;
--(void) updateTextForPullToUpdate;
+- (void) initializeRssFeed;
+- (void) updateTextForPullToUpdate;
+- (void) prepareForUpdatingView;
+- (void) updatePodcastLastUpdated;
+
 @end
 
 @implementation SermonsViewController
@@ -64,6 +67,9 @@
     return podcastLastUpdated;	
 }
 
+#pragma mark -
+#pragma mark Custom Methods
+
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
 	
 	Feed *feed = (Feed *)[self.fetchedResultsController objectAtIndexPath:indexPath];
@@ -73,8 +79,14 @@
 		// Set
 		NSMutableString *subtitle = [NSMutableString string];
 		[subtitle appendFormat:@"%@ ", feed.title];
-		NSMutableString *detailTitle = [NSMutableString string];
-		[detailTitle appendFormat:@"%@ ", feed.summary];
+//		NSMutableString *detailTitle = [NSMutableString string];
+//		[detailTitle appendFormat:@"%@ ", feed.summary];
+		
+		NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+		[dateFormatter setDateStyle:NSDateFormatterShortStyle];
+		NSString *detailTitle = [NSString stringWithFormat:@"%@: %@", [dateFormatter stringFromDate:feed.publishedOn], feed.summary];
+		[dateFormatter release];
+		
 		cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
 		cell.textLabel.text = subtitle;
 		cell.detailTextLabel.text = detailTitle;
@@ -82,6 +94,34 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;  
 }
 
+-(void) prepareForUpdatingView {
+	self.title = @"Loading...";
+	
+	//Inidicator
+	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
+	indicator.hidesWhenStopped = YES;  
+	[indicator stopAnimating];  
+	self.activityIndicator = indicator;  
+	[indicator release];	
+	
+	self.tableView.userInteractionEnabled = NO;
+	self.tableView.alpha = 0.3;
+}
+
+// Update the podcastLastUpdated
+-(void) updatePodcastLastUpdated{
+	NSDate *myDate = [NSDate date];
+	[[NSUserDefaults standardUserDefaults] setObject:myDate forKey:@"SermonLastUpdated"];
+	self.podcastLastUpdated = myDate;
+}
+
+#pragma mark -
+#pragma mark Respond to PullRefreshTableViewController
+-(void) refresh{
+	[self prepareForUpdatingView];
+	[self initializeRssFeed];	
+	[self stopLoading];
+}
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -96,20 +136,10 @@
 
 	[self updateTextForPullToUpdate];
 	
-	if (self.podcastLastUpdated == nil) {
-		self.title = @"Loading...";
-		
-		//Inidicator
-		UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
-		indicator.hidesWhenStopped = YES;  
-		[indicator stopAnimating];  
-		self.activityIndicator = indicator;  
-		[indicator release];
-		
+	if (self.podcastLastUpdated == nil) {		
 		self.responseData = [[NSMutableData data] retain];  
-		[self initializeRssFeed];
-		self.tableView.userInteractionEnabled = NO;
-		self.tableView.alpha = 0.3;  		
+		[self prepareForUpdatingView];
+		[self initializeRssFeed];		
 	}else {
 		self.title = @"Sermons";
 	}
@@ -194,38 +224,40 @@
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
-	if ([elementName isEqualToString:@"item"]) { 
-        [self.item setObject:self.currentTitle forKey:@"title"];
-		[currentTitle release];
-        [self.item setObject:self.currentAuthor forKey:@"author"];
-		[currentAuthor release];
-		[self.item setObject:self.currentSummary forKey:@"summary"];
-		[currentSummary release]; 
-		[self.item setObject:self.currentLink forKey:@"feedLink"];
-		[currentLink release];
+	if ([elementName isEqualToString:@"item"]) {
+		// If never updated, or if updated then only save new stuff
 		NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
 		[dateFormat setDateFormat:@"EEE, d MMM yyyy HH:mm:ss Z"];
+		// self.currentDate is auto released
 		self.currentDate = [dateFormat dateFromString:self.currentDateString];
 		[dateFormat release];
-		[self.item setObject:self.currentDate forKey:@"publishedOn"];
 		[currentDateString release];
-		[self.item setObject:@"podcast" forKey:@"feedType"]; 
-		[self.item setObject:@"" forKey:@"content"];
-		[self insertNewObject:self.item];
-		[item release];
+		if (self.podcastLastUpdated == nil || (self.podcastLastUpdated != nil && [self.podcastLastUpdated compare:self.currentDate] == NSOrderedAscending)) {
+			[self.item setObject:self.currentTitle forKey:@"title"];
+			[self.item setObject:self.currentAuthor forKey:@"author"];
+			[self.item setObject:self.currentSummary forKey:@"summary"]; 
+			[self.item setObject:self.currentLink forKey:@"feedLink"];
+			[self.item setObject:self.currentDate forKey:@"publishedOn"];
+			[self.item setObject:@"podcast" forKey:@"feedType"]; 
+			[self.item setObject:@"" forKey:@"content"];
+			[self insertNewObject:self.item];
+		}
+		[currentTitle release];
+		[currentAuthor release];
+		[currentSummary release];
+		[currentLink release];
+		[item release];		
     }  
 }  
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-	self.title = @"Sermons";
 	//Set it to today
-	NSDate *myDate = [NSDate date];
-	[[NSUserDefaults standardUserDefaults] setObject:myDate forKey:@"SermonLastUpdated"];
-	self.podcastLastUpdated = myDate;
+	[self updatePodcastLastUpdated];
 	[self updateTextForPullToUpdate];
 	self.tableView.userInteractionEnabled = YES;
 	self.tableView.alpha = 1;
 	[self.tableView reloadData];
+	self.title = @"Sermons";
 }
 
 #pragma mark -
@@ -241,7 +273,7 @@
 	feed.feedLink = [itemToSave objectForKey:@"feedLink"];
 	feed.summary = [itemToSave objectForKey:@"summary"];
 	feed.author = [itemToSave objectForKey:@"author"];
-	//feed.publishedOn = [itemToSave objectForKey:@"publishedOn"];
+	feed.publishedOn = [itemToSave objectForKey:@"publishedOn"];
 	feed.content = [itemToSave objectForKey:@"content"];
 	
     // Save the context.
@@ -440,7 +472,6 @@
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
 }
-
 
 @end
 

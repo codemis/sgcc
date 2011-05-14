@@ -19,6 +19,8 @@
 -(void) parseArticles;
 - (void)insertNewObject:(NSMutableDictionary *) itemToSave;
 -(void) updateTextForPullToUpdate;
+-(void) updateArticleLastUpdated;
+-(void) prepareForUpdatingView;
 @end
 
 
@@ -48,6 +50,49 @@
 }
 
 #pragma mark -
+#pragma mark Custom Methods
+
+// Update the ArticleLastUpdated
+-(void) updateArticleLastUpdated{
+	NSDate *myDate = [NSDate date];
+	[[NSUserDefaults standardUserDefaults] setObject:myDate forKey:@"ArticleLastUpdated"];
+	self.articleLastUpdated = myDate;
+}
+
+-(void) prepareForUpdatingView {
+	self.title = @"Loading...";
+	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
+	indicator.hidesWhenStopped = YES;    
+	self.activityIndicator = indicator;  
+	[indicator release];
+	
+	self.tableView.userInteractionEnabled = NO;
+	self.tableView.alpha = 0.3;
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    Feed *feed = (Feed *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+	cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+	cell.textLabel.text = feed.title;
+	
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setDateStyle:NSDateFormatterShortStyle];
+	NSString *subtitle = [NSString stringWithFormat:@"%@: %@", [dateFormatter stringFromDate:feed.publishedOn], feed.summary];
+	[dateFormatter release];
+	cell.detailTextLabel.text = subtitle;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;  
+}
+
+#pragma mark -
+#pragma mark Respond to PullRefreshTableViewController
+-(void) refresh{
+	[self prepareForUpdatingView];
+	[self parseArticles];
+	[self stopLoading];
+}
+
+#pragma mark -
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
@@ -62,14 +107,7 @@
 	self.itemsToDisplay = [NSArray array];
 	
 	if (self.articleLastUpdated == nil) {
-		self.title = @"Loading...";
-		UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
-		indicator.hidesWhenStopped = YES;    
-		self.activityIndicator = indicator;  
-		[indicator release];
-		
-		self.tableView.userInteractionEnabled = NO;
-		self.tableView.alpha = 0.3;
+		[self prepareForUpdatingView];
 		[self parseArticles];
 	}else {
 		self.title = @"Blog";
@@ -93,7 +131,6 @@
 	feedParser.feedParseType = ParseTypeFull; // Parse feed info and all items
 	feedParser.connectionType = ConnectionTypeAsynchronously;
 	[feedParser parse];
-	self.title = @"Blog";
 }
 
 -(void) updateTextForPullToUpdate{
@@ -135,13 +172,13 @@
 			[itemToSave release];			
 		}
 	}
+
+
 }
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser {
 	//Set it to today
-	NSDate *myDate = [NSDate date];
-	[[NSUserDefaults standardUserDefaults] setObject:myDate forKey:@"ArticleLastUpdated"];
-	self.articleLastUpdated = myDate;
+	[self updateArticleLastUpdated];
 	[self updateTextForPullToUpdate];
 	
 	self.itemsToDisplay = [parsedItems sortedArrayUsingDescriptors:
@@ -151,6 +188,7 @@
 	self.tableView.alpha = 1;
 	[self.tableView reloadData];
 	[activityIndicator stopAnimating];
+	self.title = @"Blog";
 }
 
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
@@ -161,22 +199,6 @@
 	self.tableView.alpha = 1;
 	[self.tableView reloadData];
 }  
-
-
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    
-    Feed *feed = (Feed *)[self.fetchedResultsController objectAtIndexPath:indexPath];
-	cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-	cell.textLabel.text = feed.title;
-	
-	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateStyle:NSDateFormatterShortStyle];
-	NSString *subtitle = [NSString stringWithFormat:@"%@: %@", [dateFormatter stringFromDate:feed.publishedOn], feed.summary];
-	[dateFormatter release];
-	cell.detailTextLabel.text = subtitle;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;  
-}
-
 
 #pragma mark -
 #pragma mark Add a new object
