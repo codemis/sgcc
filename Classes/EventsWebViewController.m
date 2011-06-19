@@ -12,13 +12,12 @@
 @end
 
 @implementation EventsWebViewController
-@synthesize webView, activityIndicator, navBar;
+@synthesize webView, navBar;
 
 
 - (void)dealloc {
 	[navBar release];
 	[webView release];
-	[activityIndicator release];
     [super dealloc];
 }
 
@@ -44,10 +43,6 @@
 																							target:self 
 																							action:@selector(refresh)] autorelease];
 	self.navBar.topItem.title = @"Loading...";
-	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
-    indicator.hidesWhenStopped = YES;  
-    self.activityIndicator = indicator;  
-    [indicator release];
 	
 	[self updatePage];
 }
@@ -60,9 +55,26 @@
 
 #pragma mark -
 #pragma mark Handle Web View Delegate
+-(void)webViewDidStartLoad:(UIWebView *)wView{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Unable to Handle Request"
+													message: @"Please check your internet connection."
+												   delegate: self
+										  cancelButtonTitle: @"OK"
+										  otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+	
+	self.navBar.topItem.title = @"Events";
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
 	self.navBar.topItem.title = @"Events";
-	[self.activityIndicator stopAnimating];
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
 }
 
 - (void)didReceiveMemoryWarning {

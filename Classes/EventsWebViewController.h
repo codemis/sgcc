@@ -10,11 +10,9 @@
 
 
 @interface EventsWebViewController : UIViewController <UIWebViewDelegate> {
-	UIActivityIndicatorView *activityIndicator;
 }
 
 @property(nonatomic,retain) IBOutlet UIWebView *webView;
-@property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, retain) IBOutlet UINavigationBar *navBar;
 
 @end

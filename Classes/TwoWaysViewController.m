@@ -15,11 +15,10 @@
 
 @implementation TwoWaysViewController
 
-@synthesize webView, activityIndicator, navBar, delegate;
+@synthesize webView, navBar, delegate;
 
 - (void)dealloc {
 	[delegate release];
-	[activityIndicator release];
 	[webView release];
 	[navBar release];
     [super dealloc];
@@ -55,11 +54,6 @@
 	self.navBar.topItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
 																						   target:self 
 																						   action:@selector(dismissTwoWays)] autorelease];
-	self.navBar.topItem.title = @"Loading...";
-	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
-    indicator.hidesWhenStopped = YES;  
-    self.activityIndicator = indicator;  
-    [indicator release];
 	
 	[self updatePage];
 	
@@ -76,10 +70,29 @@
     return YES;
 }
 
+#pragma mark -
 #pragma mark Handle Web View Delegate
+-(void)webViewDidStartLoad:(UIWebView *)wView{
+	self.navBar.topItem.title = @"Loading...";
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Unable to Handle Request"
+													message: @"Please check your internet connection."
+												   delegate: self
+										  cancelButtonTitle: @"OK"
+										  otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+	
+	self.navBar.topItem.title = @"Two Ways To Live";
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
 	self.navBar.topItem.title = @"Two Ways To Live";
-	[self.activityIndicator stopAnimating];
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
 }
 
 - (void)didReceiveMemoryWarning {

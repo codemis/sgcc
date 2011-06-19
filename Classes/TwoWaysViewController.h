@@ -11,11 +11,9 @@
 
 
 @interface TwoWaysViewController : UIViewController <UIWebViewDelegate, ModalViewControllerDelegate> {
-	UIActivityIndicatorView *activityIndicator;
 }
 
 @property(nonatomic,retain) IBOutlet UIWebView *webView;
-@property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, retain) IBOutlet UINavigationBar *navBar;
 @property (nonatomic, retain) id <ModalViewControllerDelegate> delegate;
 @end

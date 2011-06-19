@@ -27,10 +27,9 @@
 
 @implementation RootViewController
 
-@synthesize fetchedResultsController=fetchedResultsController_, managedObjectContext=managedObjectContext_, activityIndicator, itemsToDisplay, articleLastUpdated;
+@synthesize fetchedResultsController=fetchedResultsController_, managedObjectContext=managedObjectContext_, itemsToDisplay, articleLastUpdated;
 
 - (void)dealloc {
-	[activityIndicator release];
 	[parsedItems release];
 	[itemsToDisplay release];
 	[feedParser release];
@@ -66,6 +65,7 @@
 	
 	self.tableView.userInteractionEnabled = YES;
 	self.tableView.alpha = 1;
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
 }
 
 // Update the ArticleLastUpdated
@@ -77,10 +77,7 @@
 
 -(void) prepareForUpdatingView {
 	self.title = @"Loading...";
-	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
-	indicator.hidesWhenStopped = YES;    
-	self.activityIndicator = indicator;  
-	[indicator release];
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
 	
 	self.tableView.userInteractionEnabled = NO;
 	self.tableView.alpha = 0.3;
@@ -203,7 +200,7 @@
 	self.tableView.userInteractionEnabled = YES;
 	self.tableView.alpha = 1;
 	[self.tableView reloadData];
-	[activityIndicator stopAnimating];
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
 	self.title = @"Blog";
 }
 

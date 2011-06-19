@@ -32,7 +32,6 @@
 @synthesize currentLink;
 @synthesize currentSummary;
 @synthesize currentElement;
-@synthesize activityIndicator;
 @synthesize myFeedParser;
 @synthesize fetchedResultsController=fetchedResultsController_;
 @synthesize managedObjectContext=managedObjectContext_;
@@ -49,7 +48,6 @@
     [responseData release];
 	[currentSummary release];
 	[currentElement release];
-	[activityIndicator release];
 	[myFeedParser release];
     [fetchedResultsController_ release];
     [managedObjectContext_ release];
@@ -82,6 +80,7 @@
 										  otherButtonTitles: nil];
     [alert show];
     [alert release];
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
 	
 	self.tableView.userInteractionEnabled = YES;
 	self.tableView.alpha = 1;
@@ -112,12 +111,7 @@
 -(void) prepareForUpdatingView {
 	self.title = @"Loading...";
 	
-	//Inidicator
-	UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];  
-	indicator.hidesWhenStopped = YES;  
-	[indicator stopAnimating];  
-	self.activityIndicator = indicator;  
-	[indicator release];	
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;	
 	
 	self.tableView.userInteractionEnabled = NO;
 	self.tableView.alpha = 0.3;
@@ -276,6 +270,7 @@
 	[self updateTextForPullToUpdate];
 	self.tableView.userInteractionEnabled = YES;
 	self.tableView.alpha = 1;
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
 	[self.tableView reloadData];
 	self.title = @"Sermons";
 }

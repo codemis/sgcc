@@ -12,7 +12,6 @@
 #import "PullRefreshTableViewController.h"
 
 @interface RootViewController : PullRefreshTableViewController <NSFetchedResultsControllerDelegate, MWFeedParserDelegate> {
-	UIActivityIndicatorView *activityIndicator; 
 	// Parsing
 	MWFeedParser *feedParser;
 	NSMutableArray *parsedItems;
@@ -28,7 +27,6 @@
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, retain) NSArray *itemsToDisplay;
 @property (nonatomic, retain) NSDate *articleLastUpdated;
 
