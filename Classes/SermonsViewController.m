@@ -19,6 +19,7 @@
 - (void) prepareForUpdatingView;
 - (void) updatePodcastLastUpdated;
 - (Boolean) recordExists:(NSString *) podcastGUID;
+- (void) displayError:(NSString *)messageText withTitle:(NSString *)titleText;
 
 @end
 
@@ -70,6 +71,22 @@
 #pragma mark -
 #pragma mark Custom Methods
 
+//Display an error
+- (void) displayError:(NSString *)messageText withTitle:(NSString*)titleText {
+	self.title = @"Sermons";
+	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: titleText
+													message: messageText
+												   delegate: self
+										  cancelButtonTitle: @"OK"
+										  otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+	
+	self.tableView.userInteractionEnabled = YES;
+	self.tableView.alpha = 1;
+}
+
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
 	
 	Feed *feed = (Feed *)[self.fetchedResultsController objectAtIndexPath:indexPath];
@@ -79,8 +96,6 @@
 		// Set
 		NSMutableString *subtitle = [NSMutableString string];
 		[subtitle appendFormat:@"%@ ", feed.title];
-		//NSMutableString *detailTitle = [NSMutableString string];
-		//[detailTitle appendFormat:@"%@ ", feed.summary];
 		
 		NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 		[dateFormatter setDateStyle:NSDateFormatterShortStyle];
@@ -174,11 +189,8 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {  
-    NSString * errorString = [NSString stringWithFormat:@"Unable to download xml data (Error code %i )", [error code]];  
-	
-    UIAlertView * errorAlert = [[UIAlertView alloc] initWithTitle:@"Error loading content" message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];  
-    [errorAlert show];
-	[errorAlert release];
+	[self displayError:@"We were unable to handle your request.  Please check your internet connection, and try again." 
+			 withTitle:@"Unable to Handle Request"];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection  {  
@@ -269,17 +281,8 @@
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error Parsing"
-													message: @"We were unable to update the podcast."
-												   delegate: self
-										  cancelButtonTitle: @"OK"
-										  otherButtonTitles: nil];
-    [alert show];
-    [alert release];
-	
-	self.tableView.userInteractionEnabled = YES;
-	self.tableView.alpha = 1;
-	self.title = @"Sermons";
+	[self displayError:@"We were unable to handle your request.  Please check your internet connection, and try again." 
+			 withTitle:@"Unable to Handle Request"];
 }
 
 #pragma mark -
@@ -302,13 +305,8 @@
     // Save the context.
     NSError *error = nil;
     if (![context save:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+		[self displayError:@"We were unable to handle your request." 
+				 withTitle:@"Unable to Handle Request"];
     }
 }
 
@@ -358,14 +356,8 @@
     
     NSError *error = nil;
     if (![fetchedResultsController_ performFetch:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
+		[self displayError:@"We were unable to handle your request." 
+				 withTitle:@"Unable to Handle Request"];    }
     
     return fetchedResultsController_;
 }    

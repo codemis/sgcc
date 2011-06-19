@@ -16,11 +16,12 @@
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
--(void) parseArticles;
+- (void) parseArticles;
 - (void)insertNewObject:(NSMutableDictionary *) itemToSave;
--(void) updateTextForPullToUpdate;
--(void) updateArticleLastUpdated;
--(void) prepareForUpdatingView;
+- (void) updateTextForPullToUpdate;
+- (void) updateArticleLastUpdated;
+- (void) prepareForUpdatingView;
+- (void) displayError:(NSString *)messageText withTitle:(NSString *)titleText;
 @end
 
 
@@ -51,6 +52,21 @@
 
 #pragma mark -
 #pragma mark Custom Methods
+//Display an error
+- (void) displayError:(NSString *)messageText withTitle:(NSString*)titleText {
+	self.title = @"Blog";
+	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: titleText
+													message: messageText
+												   delegate: self
+										  cancelButtonTitle: @"OK"
+										  otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+	
+	self.tableView.userInteractionEnabled = YES;
+	self.tableView.alpha = 1;
+}
 
 // Update the ArticleLastUpdated
 -(void) updateArticleLastUpdated{
@@ -192,20 +208,12 @@
 }
 
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
-	self.title = @"Blog";
+	
 	self.itemsToDisplay = [NSArray array];
 	[parsedItems removeAllObjects];
 	
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error Parsing"
-													message: @"We were unable to update the blog feed."
-												   delegate: self
-										  cancelButtonTitle: @"OK"
-										  otherButtonTitles: nil];
-    [alert show];
-    [alert release];
-	
-	self.tableView.userInteractionEnabled = YES;
-	self.tableView.alpha = 1;
+	[self displayError:@"We were unable to handle your request.  Please check your internet connection, and try again." 
+			 withTitle:@"Unable to Handle Request"];
 }  
 
 #pragma mark -
@@ -226,13 +234,8 @@
     // Save the context.
     NSError *error = nil;
     if (![context save:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        [self displayError:@"We were unable to handle your request.  Please try again." 
+				 withTitle:@"Unable to Handle Request"];
     }
 }
 
@@ -330,13 +333,8 @@
     
     NSError *error = nil;
     if (![fetchedResultsController_ performFetch:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+		[self displayError:@"We were unable to handle your request.  Please try again." 
+				 withTitle:@"Unable to Handle Request"];
     }
     
     return fetchedResultsController_;

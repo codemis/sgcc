@@ -274,7 +274,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>20</integer>
+									<integer>10</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -317,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SermonsViewController.m</string>
+								<string>RootViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +325,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SermonsViewController.m</string>
+										<string>RootViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>661B1B9913AE9C0F0022620B</string>
+										<string>661B1BAD13AE9E560022620B</string>
 										<key>history</key>
 										<array>
 											<string>66D0D6E81338E416009111B6</string>
@@ -349,7 +349,6 @@
 											<string>661B5F37137E054400EDE200</string>
 											<string>661B5FAA137E1EFB00EDE200</string>
 											<string>661B5FAC137E1EFB00EDE200</string>
-											<string>66319A7C13AD895B0073671E</string>
 											<string>661B1B3613AE91EC0022620B</string>
 											<string>661B1B3713AE91EC0022620B</string>
 											<string>661B1B3813AE91EC0022620B</string>
@@ -358,7 +357,9 @@
 											<string>661B1B7E13AE98DC0022620B</string>
 											<string>661B1B7F13AE98DC0022620B</string>
 											<string>661B1B8F13AE9ADA0022620B</string>
-											<string>661B1B9013AE9ADA0022620B</string>
+											<string>661B1BA913AE9E560022620B</string>
+											<string>661B1BAB13AE9E560022620B</string>
+											<string>661B1BAC13AE9E560022620B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -556,6 +557,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>661B1BAE13AE9E560022620B</string>
+		<string>661B1BAF13AE9E560022620B</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>66D0D60B133831DD009111B6</string>
 		<string>/Users/Technoguru/Sites/iphone/SanGabrielUnionChurch/SanGabrielUnionChurch.xcodeproj</string>
 	</array>
@@ -759,13 +764,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>661B1AFD13AE6A6D0022620B</string>
+				<string>661B1BA013AE9CA70022620B</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>661B1AFE13AE6A6D0022620B</string>
-				<string>661B1AFF13AE6A6D0022620B</string>
-				<string>661B1B0013AE6A6D0022620B</string>
-				<string>661B1B0113AE6A6D0022620B</string>
-				<string>661B1B0213AE6A6D0022620B</string>
+				<string>661B1BA113AE9CA70022620B</string>
+				<string>661B1BA213AE9CA70022620B</string>
+				<string>661B1BA313AE9CA70022620B</string>
+				<string>661B1BA413AE9CA70022620B</string>
+				<string>661B1BA513AE9CA70022620B</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -929,7 +934,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>661B1B0313AE6A6D0022620B</string>
+				<string>661B1BA613AE9CA70022620B</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
