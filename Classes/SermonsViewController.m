@@ -26,7 +26,6 @@
 @synthesize responseData;
 @synthesize item;
 @synthesize currentTitle;
-@synthesize currentDate;
 @synthesize currentAuthor;
 @synthesize currentLink;
 @synthesize currentSummary;
@@ -42,7 +41,6 @@
 - (void)dealloc {
 	[item release];
 	[currentTitle release];
-	[currentDate release];
 	[currentDateString release];
 	[currentAuthor release];
 	[currentLink release];
@@ -118,6 +116,7 @@
 #pragma mark -
 #pragma mark Respond to PullRefreshTableViewController
 -(void) refresh{
+	self.responseData = [[NSMutableData data] retain]; 
 	[self prepareForUpdatingView];
 	[self initializeRssFeed];	
 	[self stopLoading];
@@ -156,7 +155,8 @@
 }
 
 -(void) initializeRssFeed{
-	NSURL *baseURL = [NSURL URLWithString:@"http://sgucandcs.org/podcast.php?pageID=38"];  
+	//http://sgucandcs.org/podcast.php?pageID=38
+	NSURL *baseURL = [NSURL URLWithString:@"http://www.codemis.com/files/test.xml"];  
     NSURLRequest *request = [NSURLRequest requestWithURL:baseURL];  
     [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease]; 
 }
@@ -168,7 +168,7 @@
 	[self.responseData setLength:0];  
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {  
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data { 
     [self.responseData appendData:data];  
 }
 
@@ -181,7 +181,7 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection  {  
-	
+
     self.myFeedParser = [[NSXMLParser alloc] initWithData:self.responseData];  
 	
 	[responseData release];
@@ -228,20 +228,20 @@
 		// If never updated, or if updated then only save new stuff
 		NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
 		[dateFormat setDateFormat:@"EEE, d MMM yyyy HH:mm:ss Z"];
-		// self.currentDate is auto released
-		self.currentDate = [dateFormat dateFromString:self.currentDateString];
-		[dateFormat release];
+		
+		NSDate *currentDate = [dateFormat dateFromString:self.currentDateString];
 		[currentDateString release];
-		if (self.podcastLastUpdated == nil || (self.podcastLastUpdated != nil && [self.podcastLastUpdated compare:self.currentDate] == NSOrderedAscending)) {
+		if (self.podcastLastUpdated == nil || (self.podcastLastUpdated != nil && [self.podcastLastUpdated compare:currentDate] == NSOrderedAscending)) {
 			[self.item setObject:self.currentTitle forKey:@"title"];
 			[self.item setObject:self.currentAuthor forKey:@"author"];
 			[self.item setObject:self.currentSummary forKey:@"summary"]; 
 			[self.item setObject:self.currentLink forKey:@"feedLink"];
-			[self.item setObject:self.currentDate forKey:@"publishedOn"];
+			[self.item setObject:currentDate forKey:@"publishedOn"];
 			[self.item setObject:@"podcast" forKey:@"feedType"]; 
 			[self.item setObject:@"" forKey:@"content"];
 			[self insertNewObject:self.item];
 		}
+		[dateFormat release];
 		[currentTitle release];
 		[currentAuthor release];
 		[currentSummary release];
@@ -257,6 +257,21 @@
 	self.tableView.userInteractionEnabled = YES;
 	self.tableView.alpha = 1;
 	[self.tableView reloadData];
+	self.title = @"Sermons";
+}
+
+- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
+	//NSLog(@"Error on XML Parse: %@", [parseError localizedDescription] );
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error Parsing"
+													message: @"We were unable to update the podcast."
+												   delegate: self
+										  cancelButtonTitle: @"OK"
+										  otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+	
+	self.tableView.userInteractionEnabled = YES;
+	self.tableView.alpha = 1;
 	self.title = @"Sermons";
 }
 

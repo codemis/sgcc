@@ -18,7 +18,6 @@
     NSMutableDictionary *item;  
     NSString *currentElement; 
 	NSMutableString *currentTitle, *currentAuthor, *currentLink, *currentSummary, *currentDateString;
-	NSDate *currentDate;
 	NSDate *podcastLastUpdated;
 	
 	NSXMLParser *myFeedParser;
@@ -29,7 +28,6 @@
 
 @property (nonatomic, retain) NSMutableData *responseData;
 @property (nonatomic, retain) NSMutableString *currentTitle;
-@property (nonatomic, retain) NSDate *currentDate;
 @property (nonatomic, retain) NSMutableString *currentDateString;
 @property (nonatomic, retain) NSMutableString *currentAuthor;
 @property (nonatomic, retain) NSMutableString *currentLink;

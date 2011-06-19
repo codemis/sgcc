@@ -192,12 +192,20 @@
 }
 
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
-	self.title = @"Failed";
+	self.title = @"Blog";
 	self.itemsToDisplay = [NSArray array];
 	[parsedItems removeAllObjects];
+	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error Parsing"
+													message: @"We were unable to update the blog feed."
+												   delegate: self
+										  cancelButtonTitle: @"OK"
+										  otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+	
 	self.tableView.userInteractionEnabled = YES;
 	self.tableView.alpha = 1;
-	[self.tableView reloadData];
 }  
 
 #pragma mark -
