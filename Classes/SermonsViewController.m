@@ -330,7 +330,7 @@
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
+    [fetchRequest setFetchBatchSize:0];
 	
 	//Limit to only Podcast results
 	NSString *attributeName = @"feedType";
