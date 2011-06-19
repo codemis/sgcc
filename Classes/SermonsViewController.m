@@ -157,8 +157,7 @@
 }
 
 -(void) initializeRssFeed{
-	//http://sgucandcs.org/podcast.php?pageID=38
-	NSURL *baseURL = [NSURL URLWithString:@"http://www.codemis.com/files/test.xml"];  
+	NSURL *baseURL = [NSURL URLWithString:@"http://sgucandcs.org/podcast.php?pageID=38"];  
     NSURLRequest *request = [NSURLRequest requestWithURL:baseURL];  
     [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease]; 
 }
