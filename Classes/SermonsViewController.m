@@ -18,6 +18,7 @@
 - (void) updateTextForPullToUpdate;
 - (void) prepareForUpdatingView;
 - (void) updatePodcastLastUpdated;
+- (Boolean) recordExists:(NSString *) podcastGUID;
 
 @end
 
@@ -36,7 +37,7 @@
 @synthesize managedObjectContext=managedObjectContext_;
 @synthesize podcastLastUpdated;
 @synthesize currentDateString;
-
+@synthesize currentPodcastGUID;
 
 - (void)dealloc {
 	[item release];
@@ -52,6 +53,7 @@
     [fetchedResultsController_ release];
     [managedObjectContext_ release];
 	[podcastLastUpdated release];
+	[currentPodcastGUID release];
     [super dealloc];
 }
 
@@ -77,8 +79,8 @@
 		// Set
 		NSMutableString *subtitle = [NSMutableString string];
 		[subtitle appendFormat:@"%@ ", feed.title];
-//		NSMutableString *detailTitle = [NSMutableString string];
-//		[detailTitle appendFormat:@"%@ ", feed.summary];
+		//NSMutableString *detailTitle = [NSMutableString string];
+		//[detailTitle appendFormat:@"%@ ", feed.summary];
 		
 		NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 		[dateFormatter setDateStyle:NSDateFormatterShortStyle];
@@ -200,6 +202,7 @@
         self.currentAuthor = [[NSMutableString alloc] init]; 
         self.currentSummary = [[NSMutableString alloc] init]; 
 		self.currentDateString = [[NSMutableString alloc] init];
+		self.currentPodcastGUID = [[NSMutableString alloc] init];
     }  
 	
     // podcast url is an attribute of the element enclosure  
@@ -220,6 +223,8 @@
 		[self.currentSummary appendString:[content stringByRemovingNewLinesAndWhitespace]];
     } else if ([currentElement isEqualToString:@"pubDate"]) {  
 		[self.currentDateString appendString:[content stringByRemovingNewLinesAndWhitespace]];
+    } else if ([currentElement isEqualToString:@"guid"]) {  
+		[self.currentPodcastGUID appendString:[[content stringByRemovingNewLinesAndWhitespace] stringByReplacingOccurrencesOfString:@" " withString:@"_"]];
     }
 }
 
@@ -231,21 +236,25 @@
 		
 		NSDate *currentDate = [dateFormat dateFromString:self.currentDateString];
 		[currentDateString release];
-		if (self.podcastLastUpdated == nil || (self.podcastLastUpdated != nil && [self.podcastLastUpdated compare:currentDate] == NSOrderedAscending)) {
+		BOOL recordExists = [self recordExists:self.currentPodcastGUID];
+		if (!recordExists) {
 			[self.item setObject:self.currentTitle forKey:@"title"];
 			[self.item setObject:self.currentAuthor forKey:@"author"];
 			[self.item setObject:self.currentSummary forKey:@"summary"]; 
 			[self.item setObject:self.currentLink forKey:@"feedLink"];
+			[self.item setObject:self.currentPodcastGUID forKey:@"podcastGUID"];
 			[self.item setObject:currentDate forKey:@"publishedOn"];
 			[self.item setObject:@"podcast" forKey:@"feedType"]; 
 			[self.item setObject:@"" forKey:@"content"];
 			[self insertNewObject:self.item];
 		}
+		
 		[dateFormat release];
 		[currentTitle release];
 		[currentAuthor release];
 		[currentSummary release];
 		[currentLink release];
+		[currentPodcastGUID release];
 		[item release];		
     }  
 }  
@@ -261,7 +270,6 @@
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
-	//NSLog(@"Error on XML Parse: %@", [parseError localizedDescription] );
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error Parsing"
 													message: @"We were unable to update the podcast."
 												   delegate: self
@@ -290,6 +298,7 @@
 	feed.author = [itemToSave objectForKey:@"author"];
 	feed.publishedOn = [itemToSave objectForKey:@"publishedOn"];
 	feed.content = [itemToSave objectForKey:@"content"];
+	feed.podcastGUID = [itemToSave objectForKey:@"podcastGUID"];
 	
     // Save the context.
     NSError *error = nil;
@@ -362,6 +371,34 @@
     return fetchedResultsController_;
 }    
 
+- (Boolean) recordExists:(NSString *)podcastGUID{
+	
+    // Create the fetch request for the entity.
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Feed" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:1];
+	
+	NSString *attributeName = @"podcastGUID";
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@",
+							  attributeName, podcastGUID];
+	[fetchRequest setPredicate:predicate];
+    
+	// Save the context.
+    NSError *error = nil;
+	
+    NSUInteger count = [self.managedObjectContext countForFetchRequest:fetchRequest error:&error];
+	
+	[fetchRequest release]; 
+	if (count == 0){
+		return NO;
+	} else {
+		return YES;
+	}
+}
 
 #pragma mark -
 #pragma mark Table view data source

@@ -46,7 +46,7 @@
 					chosenTableWidths = (
 						103.000000,
 						22.000000,
-						144.080078,
+						93.080078,
 					);
 				};
 				UIContextForLayoutManager = {
@@ -56,8 +56,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {896, 218}}",
-							"{{901, 0}, {472, 218}}",
+							"{{0, 0}, {742, 220}}",
+							"{{747, 0}, {391, 220}}",
 						);
 					};
 					diagramSplitGeometry = {
@@ -66,8 +66,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {1373, 220}}",
-							"{{0, 225}, {1373, 512}}",
+							"{{0, 0}, {1138, 220}}",
+							"{{0, 225}, {1138, 535}}",
 						);
 					};
 					tableSplitGeometry = {
@@ -76,8 +76,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {294, 218}}",
-							"{{299, 0}, {595, 218}}",
+							"{{0, 0}, {243, 218}}",
+							"{{248, 0}, {492, 218}}",
 						);
 					};
 				};
@@ -166,7 +166,7 @@
 					chosenTableWidthsPT = (
 						128.000000,
 						108.110840,
-						332.570801,
+						229.570801,
 					);
 					chosenTableWidthsRT = (
 						128.000000,
@@ -174,7 +174,7 @@
 					);
 				};
 				"xdesign model browser state key - shown/hidden" = 1;
-				"xdesign model diagram view visible rect key" = "{{-355, -33}, {1358, 497}}";
+				"xdesign model diagram view visible rect key" = "{{-238, -44}, {1123, 520}}";
 			};
 			sepNavWindowFrame = "{{54, 5}, {1373, 873}}";
 		};
@@ -251,12 +251,51 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 330194957;
-			PBXWorkspaceStateSaveDate = 330194957;
+			PBXPerProjectTemplateStateSaveDate = 330197208;
+			PBXWorkspaceStateSaveDate = 330197208;
 		};
 		perUserProjectItems = {
-			661B1ACC13AE60240022620B /* PBXTextBookmark */ = 661B1ACC13AE60240022620B /* PBXTextBookmark */;
-			661B1AE813AE684F0022620B /* PBXTextBookmark */ = 661B1AE813AE684F0022620B /* PBXTextBookmark */;
+			661B1ACC13AE60240022620B = 661B1ACC13AE60240022620B /* PBXTextBookmark */;
+			661B1AE813AE684F0022620B = 661B1AE813AE684F0022620B /* PBXTextBookmark */;
+			661B1B2713AE90900022620B /* XCBuildMessageTextBookmark */ = 661B1B2713AE90900022620B /* XCBuildMessageTextBookmark */;
+			661B1B2813AE90900022620B /* PBXTextBookmark */ = 661B1B2813AE90900022620B /* PBXTextBookmark */;
+			661B1B2B13AE90B50022620B /* PBXTextBookmark */ = 661B1B2B13AE90B50022620B /* PBXTextBookmark */;
+			661B1B2E13AE90ED0022620B /* PBXTextBookmark */ = 661B1B2E13AE90ED0022620B /* PBXTextBookmark */;
+			661B1B3113AE91800022620B /* PBXTextBookmark */ = 661B1B3113AE91800022620B /* PBXTextBookmark */;
+			661B1B3413AE91B70022620B /* PBXTextBookmark */ = 661B1B3413AE91B70022620B /* PBXTextBookmark */;
+			661B1B3513AE91EC0022620B /* XDModelBookmark */ = 661B1B3513AE91EC0022620B /* XDModelBookmark */;
+			661B1B3613AE91EC0022620B /* PBXTextBookmark */ = 661B1B3613AE91EC0022620B /* PBXTextBookmark */;
+			661B1B3713AE91EC0022620B /* PBXTextBookmark */ = 661B1B3713AE91EC0022620B /* PBXTextBookmark */;
+			661B1B3813AE91EC0022620B /* PBXTextBookmark */ = 661B1B3813AE91EC0022620B /* PBXTextBookmark */;
+			661B1B3913AE91EC0022620B /* PBXTextBookmark */ = 661B1B3913AE91EC0022620B /* PBXTextBookmark */;
+			661B1B3A13AE91EC0022620B /* PBXTextBookmark */ = 661B1B3A13AE91EC0022620B /* PBXTextBookmark */;
+			661B1B3B13AE91EC0022620B /* XCBuildMessageTextBookmark */ = 661B1B3B13AE91EC0022620B /* XCBuildMessageTextBookmark */;
+			661B1B3C13AE91EC0022620B /* PBXTextBookmark */ = 661B1B3C13AE91EC0022620B /* PBXTextBookmark */;
+			661B1B4813AE934B0022620B /* PBXTextBookmark */ = 661B1B4813AE934B0022620B /* PBXTextBookmark */;
+			661B1B4B13AE93990022620B /* PBXTextBookmark */ = 661B1B4B13AE93990022620B /* PBXTextBookmark */;
+			661B1B4E13AE93D50022620B /* PBXTextBookmark */ = 661B1B4E13AE93D50022620B /* PBXTextBookmark */;
+			661B1B5113AE94010022620B /* PBXTextBookmark */ = 661B1B5113AE94010022620B /* PBXTextBookmark */;
+			661B1B5213AE94210022620B /* PBXTextBookmark */ = 661B1B5213AE94210022620B /* PBXTextBookmark */;
+			661B1B5313AE94210022620B /* PBXTextBookmark */ = 661B1B5313AE94210022620B /* PBXTextBookmark */;
+			661B1B5413AE94210022620B /* PBXTextBookmark */ = 661B1B5413AE94210022620B /* PBXTextBookmark */;
+			661B1B5713AE94E50022620B /* PBXTextBookmark */ = 661B1B5713AE94E50022620B /* PBXTextBookmark */;
+			661B1B5A13AE95530022620B /* PBXTextBookmark */ = 661B1B5A13AE95530022620B /* PBXTextBookmark */;
+			661B1B6113AE95B70022620B /* PBXTextBookmark */ = 661B1B6113AE95B70022620B /* PBXTextBookmark */;
+			661B1B6813AE96080022620B /* PBXTextBookmark */ = 661B1B6813AE96080022620B /* PBXTextBookmark */;
+			661B1B6B13AE96610022620B /* PBXTextBookmark */ = 661B1B6B13AE96610022620B /* PBXTextBookmark */;
+			661B1B7113AE97690022620B /* PBXTextBookmark */ = 661B1B7113AE97690022620B /* PBXTextBookmark */;
+			661B1B7413AE98520022620B /* PBXTextBookmark */ = 661B1B7413AE98520022620B /* PBXTextBookmark */;
+			661B1B7D13AE98DC0022620B /* PBXTextBookmark */ = 661B1B7D13AE98DC0022620B /* PBXTextBookmark */;
+			661B1B7E13AE98DC0022620B /* PBXTextBookmark */ = 661B1B7E13AE98DC0022620B /* PBXTextBookmark */;
+			661B1B7F13AE98DC0022620B /* XDModelBookmark */ = 661B1B7F13AE98DC0022620B /* XDModelBookmark */;
+			661B1B8013AE98DC0022620B /* PBXTextBookmark */ = 661B1B8013AE98DC0022620B /* PBXTextBookmark */;
+			661B1B8113AE98DC0022620B /* PBXTextBookmark */ = 661B1B8113AE98DC0022620B /* PBXTextBookmark */;
+			661B1B8413AE99AE0022620B /* PBXTextBookmark */ = 661B1B8413AE99AE0022620B /* PBXTextBookmark */;
+			661B1B8713AE9A990022620B /* PBXTextBookmark */ = 661B1B8713AE9A990022620B /* PBXTextBookmark */;
+			661B1B8E13AE9AD90022620B /* PBXTextBookmark */ = 661B1B8E13AE9AD90022620B /* PBXTextBookmark */;
+			661B1B8F13AE9ADA0022620B /* PBXTextBookmark */ = 661B1B8F13AE9ADA0022620B /* PBXTextBookmark */;
+			661B1B9013AE9ADA0022620B /* PBXTextBookmark */ = 661B1B9013AE9ADA0022620B /* PBXTextBookmark */;
+			661B1B9113AE9ADA0022620B /* PBXTextBookmark */ = 661B1B9113AE9ADA0022620B /* PBXTextBookmark */;
 			661B5F37137E054400EDE200 = 661B5F37137E054400EDE200 /* PBXTextBookmark */;
 			661B5FAA137E1EFB00EDE200 = 661B5FAA137E1EFB00EDE200 /* PBXTextBookmark */;
 			661B5FAB137E1EFB00EDE200 = 661B5FAB137E1EFB00EDE200 /* PBXTextBookmark */;
@@ -285,12 +324,19 @@
 		userBuildSettings = {
 		};
 	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 745}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 378}";
+		};
+	};
 	661B1ACC13AE60240022620B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 158";
 		rLen = 0;
-		rLoc = 4638;
+		rLoc = 4751;
 		rType = 0;
 		vrLen = 2078;
 		vrLoc = 3644;
@@ -300,10 +346,708 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 232";
 		rLen = 0;
-		rLoc = 7923;
+		rLoc = 8307;
 		rType = 0;
 		vrLen = 2944;
 		vrLoc = 5763;
+	};
+	661B1B2713AE90900022620B /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Unused variable 'count'";
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 392;
+		rType = 1;
+	};
+	661B1B2813AE90900022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 392";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1195;
+		vrLoc = 14165;
+	};
+	661B1B2B13AE90B50022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 392";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1195;
+		vrLoc = 14165;
+	};
+	661B1B2E13AE90ED0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 392";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1498;
+		vrLoc = 13533;
+	};
+	661B1B3113AE91800022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 393";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1417;
+		vrLoc = 13670;
+	};
+	661B1B3413AE91B70022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 393";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1414;
+		vrLoc = 13665;
+	};
+	661B1B3513AE91EC0022620B /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = 28860B760F44E54D00985440 /* SanGabrielUnionChurch.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
+		uiCtxt = {
+			UIContextForDetailArea = {
+				_indexOfSelectedPane = 0;
+				_indexOfSelectedView = 1;
+			};
+			UIContextForEntityArea = {
+				_indexOfSelectedView = 0;
+				chosenTableColumnns = (
+					"ET Entity",
+					"ET Abstract",
+					"ET Class",
+				);
+				chosenTableColumnns_sortDirections = (
+					YES,
+				);
+				chosenTableColumnns_sortKeys = (
+					name,
+				);
+				chosenTableColumnns_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableWidths = (
+					103.000000,
+					22.000000,
+					93.080078,
+				);
+			};
+			UIContextForLayoutManager = {
+				detailSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {742, 218}}",
+						"{{747, 0}, {391, 218}}",
+					);
+				};
+				diagramSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {1138, 220}}",
+						"{{0, 225}, {1138, 535}}",
+					);
+				};
+				tableSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {243, 218}}",
+						"{{248, 0}, {492, 218}}",
+					);
+				};
+			};
+			UIContextForPropertyArea = {
+				_indexOfSelectedView = 0;
+				chosenTableColumnnFRTs = (
+					"FT Fetch Request",
+					"FT Predicate",
+				);
+				chosenTableColumnnFRTs_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnFRTs_sortKeys = (
+					name,
+				);
+				chosenTableColumnnFRTs_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsAT = (
+					"AT Attribute",
+					"AT Type",
+				);
+				chosenTableColumnnsAT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsAT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsAT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsFPT = (
+					"FP FetchedProperty",
+					"FP Destination",
+					"FP Predicate",
+				);
+				chosenTableColumnnsFPT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsFPT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsFPT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsPT = (
+					"PT Property",
+					"PT Kind",
+					"PT SharedKeyOne",
+				);
+				chosenTableColumnnsPT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsPT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsPT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsRT = (
+					"RT Relationship",
+					"RT Destination",
+				);
+				chosenTableColumnnsRT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsRT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsRT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableWidthsAT = (
+					128.000000,
+					64.000000,
+				);
+				chosenTableWidthsFPT = (
+					128.000000,
+					64.000000,
+					144.764160,
+				);
+				chosenTableWidthsFRT = (
+					128.000000,
+					249.764160,
+				);
+				chosenTableWidthsPT = (
+					128.000000,
+					108.110840,
+					229.570801,
+				);
+				chosenTableWidthsRT = (
+					128.000000,
+					64.000000,
+				);
+			};
+			"xdesign model browser state key - shown/hidden" = 1;
+			"xdesign model diagram view visible rect key" = "{{-238, -44}, {1123, 520}}";
+			"xdesign model selected entities key" = (
+				"<XDPMEntity: 0x201e4b500>{name=Feed, package=}",
+			);
+			"xdesign model selected properties key" = (
+				"<XDPMAttribute: 0x20109a9a0>{name=author, type=(null)}",
+			);
+		};
+	};
+	661B1B3613AE91EC0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 66DA31F5134D61DC00356C53 /* Feed.m */;
+		name = "Feed.m: 21";
+		rLen = 0;
+		rLoc = 328;
+		rType = 0;
+		vrLen = 335;
+		vrLoc = 0;
+	};
+	661B1B3713AE91EC0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667B00D11339AE6D00790320 /* EventsWebViewController.h */;
+		name = "EventsWebViewController.h: 6";
+		rLen = 0;
+		rLoc = 128;
+		rType = 0;
+		vrLen = 506;
+		vrLoc = 0;
+	};
+	661B1B3813AE91EC0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667B00D21339AE6D00790320 /* EventsWebViewController.m */;
+		name = "EventsWebViewController.m: 13";
+		rLen = 0;
+		rLoc = 254;
+		rType = 0;
+		vrLen = 1810;
+		vrLoc = 33;
+	};
+	661B1B3913AE91EC0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
+		name = "SermonsViewController.h: 41";
+		rLen = 26;
+		rLoc = 1588;
+		rType = 0;
+		vrLen = 1740;
+		vrLoc = 0;
+	};
+	661B1B3A13AE91EC0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 66DA31F4134D61DC00356C53 /* Feed.h */;
+		name = "Feed.h: 23";
+		rLen = 11;
+		rLoc = 601;
+		rType = 0;
+		vrLen = 623;
+		vrLoc = 0;
+	};
+	661B1B3B13AE91EC0022620B /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Unused variable 'count'";
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 392;
+		rType = 1;
+	};
+	661B1B3C13AE91EC0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 248";
+		rLen = 0;
+		rLoc = 8955;
+		rType = 0;
+		vrLen = 2682;
+		vrLoc = 7235;
+	};
+	661B1B4813AE934B0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 392";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1419;
+		vrLoc = 13583;
+	};
+	661B1B4B13AE93990022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 392";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1604;
+		vrLoc = 13399;
+	};
+	661B1B4E13AE93D50022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 392";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1604;
+		vrLoc = 13399;
+	};
+	661B1B5113AE94010022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 392";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1604;
+		vrLoc = 13399;
+	};
+	661B1B5213AE94210022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 662039AA134EB05900C22ACF /* PullRefreshTableViewController.m */;
+		name = "PullRefreshTableViewController.m: 143";
+		rLen = 51;
+		rLoc = 5576;
+		rType = 0;
+		vrLen = 1629;
+		vrLoc = 4660;
+	};
+	661B1B5313AE94210022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 372";
+		rLen = 0;
+		rLoc = 14050;
+		rType = 0;
+		vrLen = 1920;
+		vrLoc = 13201;
+	};
+	661B1B5413AE94210022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 249";
+		rLen = 0;
+		rLoc = 8958;
+		rType = 0;
+		vrLen = 2488;
+		vrLoc = 7542;
+	};
+	661B1B5713AE94E50022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 394";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1928;
+		vrLoc = 12591;
+	};
+	661B1B5A13AE95530022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 395";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1894;
+		vrLoc = 12223;
+	};
+	661B1B6113AE95B70022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 395";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1843;
+		vrLoc = 12223;
+	};
+	661B1B6813AE96080022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 395";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1894;
+		vrLoc = 12223;
+	};
+	661B1B6B13AE96610022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 395";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1894;
+		vrLoc = 12223;
+	};
+	661B1B7113AE97690022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 397";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1894;
+		vrLoc = 12276;
+	};
+	661B1B7413AE98520022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 396";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1894;
+		vrLoc = 12224;
+	};
+	661B1B7D13AE98DC0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 378;
+		vrLoc = 0;
+	};
+	661B1B7E13AE98DC0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 66DA31F4134D61DC00356C53 /* Feed.h */;
+		name = "Feed.h: 23";
+		rLen = 11;
+		rLoc = 601;
+		rType = 0;
+		vrLen = 623;
+		vrLoc = 0;
+	};
+	661B1B7F13AE98DC0022620B /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = 28860B760F44E54D00985440 /* SanGabrielUnionChurch.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
+		uiCtxt = {
+			UIContextForDetailArea = {
+				_indexOfSelectedPane = 0;
+				_indexOfSelectedView = 1;
+			};
+			UIContextForEntityArea = {
+				_indexOfSelectedView = 0;
+				chosenTableColumnns = (
+					"ET Entity",
+					"ET Abstract",
+					"ET Class",
+				);
+				chosenTableColumnns_sortDirections = (
+					YES,
+				);
+				chosenTableColumnns_sortKeys = (
+					name,
+				);
+				chosenTableColumnns_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableWidths = (
+					103.000000,
+					22.000000,
+					93.080078,
+				);
+			};
+			UIContextForLayoutManager = {
+				detailSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {742, 220}}",
+						"{{747, 0}, {391, 220}}",
+					);
+				};
+				diagramSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {1138, 220}}",
+						"{{0, 225}, {1138, 535}}",
+					);
+				};
+				tableSplitGeometry = {
+					_collapsingFrameDimension = 0;
+					_indexOfCollapsedView = 0;
+					_percentageOfCollapsedView = 0;
+					isCollapsed = yes;
+					sizes = (
+						"{{0, 0}, {243, 218}}",
+						"{{248, 0}, {492, 218}}",
+					);
+				};
+			};
+			UIContextForPropertyArea = {
+				_indexOfSelectedView = 0;
+				chosenTableColumnnFRTs = (
+					"FT Fetch Request",
+					"FT Predicate",
+				);
+				chosenTableColumnnFRTs_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnFRTs_sortKeys = (
+					name,
+				);
+				chosenTableColumnnFRTs_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsAT = (
+					"AT Attribute",
+					"AT Type",
+				);
+				chosenTableColumnnsAT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsAT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsAT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsFPT = (
+					"FP FetchedProperty",
+					"FP Destination",
+					"FP Predicate",
+				);
+				chosenTableColumnnsFPT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsFPT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsFPT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsPT = (
+					"PT Property",
+					"PT Kind",
+					"PT SharedKeyOne",
+				);
+				chosenTableColumnnsPT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsPT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsPT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableColumnnsRT = (
+					"RT Relationship",
+					"RT Destination",
+				);
+				chosenTableColumnnsRT_sortDirections = (
+					YES,
+				);
+				chosenTableColumnnsRT_sortKeys = (
+					name,
+				);
+				chosenTableColumnnsRT_sortSelectors = (
+					"_xdcaseInsensitiveNumericCompare:",
+				);
+				chosenTableWidthsAT = (
+					128.000000,
+					64.000000,
+				);
+				chosenTableWidthsFPT = (
+					128.000000,
+					64.000000,
+					144.764160,
+				);
+				chosenTableWidthsFRT = (
+					128.000000,
+					249.764160,
+				);
+				chosenTableWidthsPT = (
+					128.000000,
+					108.110840,
+					229.570801,
+				);
+				chosenTableWidthsRT = (
+					128.000000,
+					64.000000,
+				);
+			};
+			"xdesign model browser state key - shown/hidden" = 1;
+			"xdesign model diagram view visible rect key" = "{{-238, -44}, {1123, 520}}";
+			"xdesign model selected entities key" = (
+				"<XDPMEntity: 0x201e4b500>{name=Feed, package=}",
+			);
+			"xdesign model selected properties key" = (
+				"<XDPMAttribute: 0x20109a9a0>{name=author, type=(null)}",
+			);
+		};
+	};
+	661B1B8013AE98DC0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 251";
+		rLen = 9;
+		rLoc = 8814;
+		rType = 0;
+		vrLen = 2245;
+		vrLoc = 7745;
+	};
+	661B1B8113AE98DC0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 305";
+		rLen = 0;
+		rLoc = 10834;
+		rType = 0;
+		vrLen = 2350;
+		vrLoc = 9468;
+	};
+	661B1B8413AE99AE0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 397";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1894;
+		vrLoc = 12284;
+	};
+	661B1B8713AE9A990022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 393";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1769;
+		vrLoc = 11679;
+	};
+	661B1B8E13AE9AD90022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 393";
+		rLen = 0;
+		rLoc = 14718;
+		rType = 0;
+		vrLen = 1769;
+		vrLoc = 11679;
+	};
+	661B1B8F13AE9ADA0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8881133ACAF200F75A5A /* SermonsViewController.h */;
+		name = "SermonsViewController.h: 41";
+		rLen = 58;
+		rLoc = 1641;
+		rType = 0;
+		vrLen = 1740;
+		vrLoc = 0;
+	};
+	661B1B9013AE9ADA0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 92";
+		rLen = 0;
+		rLoc = 2711;
+		rType = 0;
+		vrLen = 1882;
+		vrLoc = 1646;
+	};
+	661B1B9113AE9ADA0022620B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
+		name = "SermonsViewController.m: 95";
+		rLen = 0;
+		rLoc = 2788;
+		rType = 0;
+		vrLen = 1882;
+		vrLoc = 1646;
 	};
 	661B5F37137E054400EDE200 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -354,9 +1098,9 @@
 	};
 	662039AA134EB05900C22ACF /* PullRefreshTableViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1278, 2184}}";
-			sepNavSelRange = "{5132, 11}";
-			sepNavVisRange = "{3905, 2253}";
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 2184}}";
+			sepNavSelRange = "{5576, 51}";
+			sepNavVisRange = "{4660, 1629}";
 		};
 	};
 	66319A7C13AD895B0073671E /* PBXTextBookmark */ = {
@@ -571,16 +1315,16 @@
 	};
 	667A8881133ACAF200F75A5A /* SermonsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1278, 892}}";
-			sepNavSelRange = "{319, 11}";
-			sepNavVisRange = "{0, 1673}";
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 745}}";
+			sepNavSelRange = "{1641, 58}";
+			sepNavVisRange = "{0, 1740}";
 		};
 	};
 	667A8882133ACAF200F75A5A /* SermonsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1342, 6318}}";
-			sepNavSelRange = "{7923, 0}";
-			sepNavVisRange = "{5763, 2944}";
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 7241}}";
+			sepNavSelRange = "{2788, 0}";
+			sepNavVisRange = "{1646, 1882}";
 			sepNavWindowFrame = "{{67, 0}, {1373, 873}}";
 		};
 	};
@@ -664,16 +1408,16 @@
 	};
 	667B00D11339AE6D00790320 /* EventsWebViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1039, 720}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 745}}";
 			sepNavSelRange = "{128, 0}";
 			sepNavVisRange = "{0, 506}";
 		};
 	};
 	667B00D21339AE6D00790320 /* EventsWebViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1278, 1053}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 1040}}";
 			sepNavSelRange = "{254, 0}";
-			sepNavVisRange = "{33, 2199}";
+			sepNavVisRange = "{33, 1810}";
 		};
 	};
 	667B01221339B58400790320 /* PBXTextBookmark */ = {
@@ -698,7 +1442,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 239";
 		rLen = 0;
-		rLoc = 8223;
+		rLoc = 8550;
 		rType = 0;
 		vrLen = 2715;
 		vrLoc = 6740;
@@ -790,16 +1534,16 @@
 	};
 	66DA31F4134D61DC00356C53 /* Feed.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1112, 745}}";
-			sepNavSelRange = "{558, 0}";
-			sepNavVisRange = "{0, 569}";
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 745}}";
+			sepNavSelRange = "{601, 11}";
+			sepNavVisRange = "{0, 623}";
 		};
 	};
 	66DA31F5134D61DC00356C53 /* Feed.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1112, 745}}";
-			sepNavSelRange = "{305, 0}";
-			sepNavVisRange = "{0, 313}";
+			sepNavIntBoundsRect = "{{0, 0}, {1079, 745}}";
+			sepNavSelRange = "{328, 0}";
+			sepNavVisRange = "{0, 335}";
 		};
 	};
 	66DA32A3134D76DB00356C53 /* RootViewController.m */ = {
@@ -841,7 +1585,7 @@
 		fRef = 667A8882133ACAF200F75A5A /* SermonsViewController.m */;
 		name = "SermonsViewController.m: 245";
 		rLen = 0;
-		rLoc = 8633;
+		rLoc = 9035;
 		rType = 0;
 		vrLen = 2646;
 		vrLoc = 6740;

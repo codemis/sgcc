@@ -32,6 +32,7 @@
 @property (nonatomic, retain) NSMutableString *currentAuthor;
 @property (nonatomic, retain) NSMutableString *currentLink;
 @property (nonatomic, retain) NSMutableString *currentSummary;
+@property (nonatomic, retain) NSMutableString *currentPodcastGUID;
 @property (nonatomic, retain) NSString *currentElement;
 @property (nonatomic, retain) NSMutableDictionary *item;
 @property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;

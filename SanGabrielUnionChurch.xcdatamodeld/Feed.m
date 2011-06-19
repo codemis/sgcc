@@ -18,5 +18,6 @@
 @dynamic summary;
 @dynamic feedLink;
 @dynamic content;
+@dynamic podcastGUID;
 
 @end

@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSString * summary;
 @property (nonatomic, retain) NSString * feedLink;
 @property (nonatomic, retain) NSString * content;
+@property (nonatomic, retain) NSString * podcastGUID;
 
 @end
 
