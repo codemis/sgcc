@@ -24,8 +24,38 @@ typedef enum { SectionDetailAction } DetailRows;
     [super dealloc];
 }
 
+//Display an error
+- (void) displayError:(NSString *)messageText withTitle:(NSString*)titleText {
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: titleText
+													message: messageText
+												   delegate: self
+										  cancelButtonTitle: @"OK"
+										  otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+}
+
+- (BOOL) canAccessSGUC{
+	NSError *error = nil;
+	NSString *URLString = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://sgucandcs.org/"] encoding:NSUTF8StringEncoding error:&error];
+	return ( URLString != NULL ) ? YES : NO;
+}
+
+- (BOOL) sermonReachable {
+	if (!self.sermon.feedLink) {
+		[self displayError:@"The sermon is unavailable for download." withTitle:@"Unable to Handle Request"];
+		return NO;
+	}else if (![self canAccessSGUC]) {
+		[self displayError:@"We were unable to handle your request.  Please check your internet connection, and try again." withTitle:@"Unable to Handle Request"];
+		return NO;
+	}else {
+		return YES;
+	}
+
+}
+
 - (void) processSermonPress{
-	if (self.sermon.feedLink) {
+	if ([self sermonReachable]) {
 		if (sermonPlaying == NO) {
 			[self.avPlayer play];
 			[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
@@ -34,10 +64,8 @@ typedef enum { SectionDetailAction } DetailRows;
 			[self.avPlayer pause];
 			sermonPlaying = NO;
 		}
-	}else { 
-		UIAlertView * errorAlert = [[UIAlertView alloc] initWithTitle:@"Error loading sermon" message:@"Unable to find the sermon file." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];  
-		[errorAlert show];
-		[errorAlert release];
+	}else {
+		sermonPlaying = NO;
 	}
 
 }
