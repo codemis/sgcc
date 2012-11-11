@@ -17,6 +17,7 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28D3F202112F7DC200FD0661 /* SanGabrielUnionChurch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* SanGabrielUnionChurch.xcdatamodeld */; };
+		6606EEED16505E5A000CF70B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6606EEEC16505E5A000CF70B /* README.md */; };
 		6612A33A136C915000953754 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6612A339136C915000953754 /* AVFoundation.framework */; };
 		661D9FF1137399AF00ED3886 /* landing.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D9FEF137399AF00ED3886 /* landing.png */; };
 		661D9FF2137399AF00ED3886 /* landing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D9FF0137399AF00ED3886 /* landing@2x.png */; };
@@ -84,6 +85,7 @@
 		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6606EEEC16505E5A000CF70B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		6612A339136C915000953754 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		661D9FEF137399AF00ED3886 /* landing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landing.png; sourceTree = "<group>"; };
 		661D9FF0137399AF00ED3886 /* landing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "landing@2x.png"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				6606EEEC16505E5A000CF70B /* README.md */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -446,6 +449,7 @@
 				665E6E9F13CA75D100E4CA6C /* Icon-Small.png in Resources */,
 				665E6EA113CA762300E4CA6C /* Icon-Small-50.png in Resources */,
 				662B07B613CA7E9A00D7CC3A /* iTunesArtwork.png in Resources */,
+				6606EEED16505E5A000CF70B /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,12 +522,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Johnathan Pulos";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Johnathan Pulos";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6A127EC5-03C7-4A70-9EE9-1C8614A36FF6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6A127EC5-03C7-4A70-9EE9-1C8614A36FF6";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -532,12 +537,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Johnathan Pulos";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Johnathan Pulos";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "6A127EC5-03C7-4A70-9EE9-1C8614A36FF6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6A127EC5-03C7-4A70-9EE9-1C8614A36FF6";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
